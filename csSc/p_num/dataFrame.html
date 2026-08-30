@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Prime Number
+    </title>
+    <link rel="stylesheet" href="/quiz/style.css">
+    <link rel="stylesheet" href="dataFrame.css" />
+    <link rel="shortcut icon" href="/images/vlab-logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/practice/style.css">
+    
+    <!-- FontAweome CDN Link for Icons -->
+
+        <!-- setting colour in text  --> 
+        <script language="javascript" type="text/javascript" src="https://codemirror.net/lib/codemirror.js"></script>
+        <script language="javascript" type="text/javascript" src="https://codemirror.net/mode/perl/perl.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css"></link>
+        <link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/abbott.css"></link>
+    
+         <!-- ended here  -->
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img class="logo" src="../../images/logo.png"></div>
+        <h1>V-Lab @ ANDC</h1>
+        <ul class="navigation">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#labs_section">Labs</a></li>
+            <li><a href="/index.html#team">Team</a></li>
+            <li><a href="/https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College
+                    Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>Generate nth Prime Number</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#practice">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Practice</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#quiz">
+                <img class="icon"
+                    src="https://img.favpng.com/21/11/8/new-york-city-fotolia-stock-photography-sales-png-favpng-f9ZiUMqBcZK0LNfZPfC674ZxZ_t.jpg"><br>
+                Quiz</a>
+        </div>
+        <!-- <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div> -->
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2> 
+                </div>
+                <div class="desc1">
+                    <p class="desc">To generate nth Prime number </p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h2 class="heading">Theory</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                    <h4 class="desc-heading" style="padding-left:50px">A prime number is a natural number greater than 1 and is divisible by 1 or itself only.</h4>
+                    <br>
+                    <!-- <img src="/csSc/dataframe/images/df1.png" class="dataImg"> -->
+                    <p class="desc">The nth prime number will be the nth position in the list of natural numbers after removing all the composites. </p>
+                    <p class="desc">For example:-
+                        <p style="padding-left: 180px ;"> 1st  prime  number is 2. </p><br>
+                        <p style="padding-left:180px"> 2nd prime number is  3.</p><br>
+                         <p style="padding-left: 180px;">4th prime number is 7.</p>
+                    </p>
+                   
+
+                    <h2 class="desc-heading mth">Psuedocode</h2>
+                    <p class="desc"><pre class="desc">
+            #Function to generate nth Prime Number
+            nthPrime(n):
+              initialize counter variable to 0 and  num variable to 1 
+               while counter is less than n:
+                    increment num by 1
+                    for i=2 to num:
+                    #Determines the modulo and compare it  to zero.
+                        if(num%i==0):  
+                            #breaks the loop if the above condition returns true  
+                                break
+                        if(num==i) :#if denominator is same as numerator 
+                            increments the counter variable by 1 if the number is prime 
+                    EndFor
+                EndWhile 
+                print("The nth prime numer is "+ num)   #Print the prime number
+                    </pre>
+               </p>
+                    </p>
+                    <div style="margin-left: 40px;"><h3 class="desc-heading">The while loop:- </h3><br>
+                    <p style="font-size:large;" class="desc">With the while loop, we can execute a set of statements as long as a condition is true
+                    </p><br>
+                    <p class="desc" style="font-size:large; color: blue;">SYNTAX:- </p><br>
+                    <p style="font-size:large;" class="red"><span style="color: red;">While(condition):</span></p><br>
+                        <p style="font-size:large;" class="green"><span style="color: green;">//code block to be executed</span></p><br>
+
+
+
+                    </div>
+                    <div style="margin-left: 40px;"><h3 class="desc-heading">The for loop:- </h3><br>
+                        <p style="font-size:large;" class="desc">A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+                        </p><br>
+                        <p class="desc" style="font-size:large; color: blue;" >SYNTAX:- </p><br>
+                        <p class="red" style="font-size:large;"><span style="color: red;">for</span> counter <span style="color: red;">in</span> sequence:</p><br>
+                            <p style="font-size:large;" class="green"><span style="color: green;">//code block to be executed</span></p><br>
+    
+    
+    
+                        </div>
+
+                        <div style="margin-left: 40px;"><h3 class="desc-heading">The break statement :- </h3><br>
+                            <p style="font-size:large;" class="desc">With the break statement, we can come out of  the loop even if, while condition is true. 
+
+                            </p><br>
+
+        
+        
+        
+                            </div>
+                    
+
+
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Steps to follow are as follows:</p>
+                    <ol class="desc" style="margin-left: 50px;">
+
+                        <li>Click on the simulation tab.</li>
+                        <li>Read the code.</li>
+                        <li>Enter the position of the prime number to be generated as input. 
+                        </li>
+                        <li>Click submit to get the output.</li>
+                        
+                    </ol><br>
+                </div>
+            </div>
+            <div class="box" id="practice"><br>
+                <div class="title" >
+                    <h2 class="heading">Practice</h2><br>
+                </div>
+                 <h3 class="desc">Description:</h3>
+                 <ol style="margin-left:50px" class="desc">
+                     <li> A list of 10 natural numbers (1-10) is displayed.</li>
+                     <li>You can move from one number to another by clicking the <i>next</i> button.</li>
+                     <li>When you will reach to the <i>Prime Number</i>,it's correspodning value will be displayes in the text boxes.</b></li>
+                     <br>
+                     <ul style="list-style: disc; margin-left:70px">
+                         <li>If the number is not a prime number, then it will be coloured <span style="color: red;">red</span> and the boxes will be empty.</li>
+                         <li>When you will reach to a prime number, then it will be coloured <span style="color: green">green</span> and the first box will contain the position of the prime number. The box below the next button will have the value of the nth prime number.</li>
+                         <li>The visited prime numbers will be coloured <span style="color: yellow;">yellow</span>.</li>
+                     </ul>
+                 </ol>
+                <div style="margin-left: 80px;">
+                    <div class="circle1">1</div>
+                    <div class="circle2">2</div>
+                    <div class="circle3">3</div>
+                    <div class="circle4">4</div>
+                    <div class="circle5">5</div>
+                    <div class="circle6">6</div>
+                    <div class="circle7">7</div>
+                    <div class="circle8">8</div>
+                    <div class="circle9">9</div>
+                    <div class="circle10">10</div>
+                
+                    <!--<div class="arrow">
+                        <div class="line"></div>
+                        <div class="point"></div>
+                    </div>-->
+                
+                    <div id="number">
+                        n = 
+                    </div>
+                      
+                    <button onclick="next()" class="button">Next</button>
+                
+                    <div id="result" >
+                        Nth Prime Number = 
+                    </div>
+                
+                    <script src="/practice/script.js">
+                    </script>
+                    </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                     <select name="select methods" id="method">
+                        <option value="m1" class="methods">Method 1</option>
+                       
+                    </select>
+                    <!--
+                    <span class="desc-p2"></span>
+                    <iframe src="https://www.online-python.com/rIVlbs6AC7" width="100%" height="700" frameborder="2" marginwidth="0" marginheight="0" allowfullscreen class="code-1 codes"></iframe>
+                    <iframe src="https://www.online-python.com/vIzhYrkgNJ" width="100%" height="700" frameborder="2" marginwidth="0" marginheight="0" allowfullscreen class="code-2 codes"></iframe>
+                    <iframe src="https://www.online-python.com/96PIXZ7SxC" width="100%" height="700" frameborder="2" marginwidth="0" marginheight="0" allowfullscreen class="code-3 codes"></iframe>
+                    <iframe src="https://www.online-python.com/rB2YdXTGgW" width="100%" height="700" frameborder="2" marginwidth="0" marginheight="0" allowfullscreen class="code-4 codes"></iframe>
+                    <iframe src="https://www.online-python.com/9Ed4ieI5w0" width="100%" height="700" frameborder="2" marginwidth="0" marginheight="0" allowfullscreen class="code-5 codes"></iframe>
+                    <iframe src="https://www.online-python.com/GYnCs8OJVW" width="100%" height="700" frameborder="2" marginwidth="0" marginheight="0" allowfullscreen class="code-6 codes"></iframe>
+                    <div style="height: 100px; width: 100px;"></div> -->
+                    <form action="/runcode" method="post">
+                        <!-- {% csrf_token %} -->
+                        <div class="main">
+                    <div class="form-group" >
+                      <div class="label">
+                      <label for="codearea" id="lb">Code Area</label>
+                    </div>
+                      <div class="input">
+                       
+                      <textarea type="text" class="form-control" id="codearea" name="codearea" rows="10" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">prime number</textarea>
+                    </div>
+                    </div>
+                  
+                    <div class="form-group" >
+                      
+                      <label for="output" id="out">Output</label>
+                      <div class="output">
+                  
+                      <textarea type="text" class="form-control" id="output" name="output" rows="4" disabled> {{ output }} 
+                      </textarea>
+                    </div>
+                  </div>
+                  </div>
+                    <button type="submit" id="btn1" class="btn btn-primary">Submit</button><br>
+                    <button type="reset" id="btn2" class="btn btn-primary">Reset</button> 
+                    <button type="submit" id="btn3" class="btn btn-primary">Next</button>
+                  </form>
+                </div>   
+            </div>
+            
+            <div class="box" id="quiz" style="height: 540px;">
+
+                <div class="title" >
+                 <H2>QUIZ</H2>      
+                </div>
+                <div>
+                    <!-- start Quiz button -->
+                    <div class="start_btn"><button style="background-color: #007bff; color: white;">Start Quiz</button></div>
+                    <!-- Info Box -->
+                    <div class="info_box">
+                        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+                        <div class="info-list">
+                            <div class="info">1. You will have only <span style="color: black;">15 seconds</span> per each question.</div>
+                            <div class="info">2. Once you select your answer, it can't be undone.</div>
+                            <div class="info">3. You can't select any option once time goes off.</div>
+                            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+                            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+                        </div>
+                        <div class="buttons">
+                            <button class="quit">Exit Quiz</button>
+                            <button class="restart">Continue</button>
+                        </div>
+                    </div>
+                    <!-- Quiz Box -->
+                    <div class="quiz_box">
+                        <header>
+                            <div class="title">Awesome Quiz Application</div>
+                            <div class="timer">
+                                <div class="time_left_txt">Time Left</div>
+                                <div class="timer_sec">15</div>
+                            </div>
+                            <div class="time_line"></div>
+                        </header>
+                        <section>
+                            <div class="que_text">
+                                <!-- Here I've inserted question from JavaScript -->
+                            </div>
+                            <div class="option_list">
+                                <!-- Here I've inserted options from JavaScript -->
+                            </div>
+                        </section>
+                        <!-- footer of Quiz Box -->
+                        <footer>
+                            <div class="total_que">
+                                <!-- Here I've inserted Question Count Number from JavaScript -->
+                            </div>
+                            <button class="next_btn">Next Que</button>
+                        </footer>
+                    </div>
+                    <!-- Result Box -->
+                    <div class="result_box">
+                        <div class="icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="complete_text">You've completed the Quiz!</div>
+                        <div class="score_text">
+                            <!-- Here I've inserted Score Result from JavaScript -->
+                        </div>
+                        <div class="buttons">
+                            <button class="restart">Replay Quiz</button>
+                            <button class="quit">Quit Quiz</button>
+                        </div>
+                    </div>
+                    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+                    <script src="/quiz/questions.js"></script>
+                    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+                    <script src="/quiz/script.js"></script>
+                </div> 
+            </div>
+            
+            <div class="box" id="Result">
+                <div class="title" >
+                    <h2 class="heading">Result</h2>
+                </div>
+                <div class="desc1" style="padding-left:50px ;">
+                    <p class="desc">Hence, we have got an idea about prime numbers and can find the value of nth Prime Number using the above code.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2><br>
+                    <ol style="margin-left:50px">
+                        <li class="desc">Urban,M. & Murach , J.(2018).Python programming.Shroff.</li><br>
+                        <li class="desc">Liang ,Y. D.(2013).Introduction to programming using python.Pearson.</li><br>
+                        <li class="desc">Taneja, S. & Kumar,N.(2018).Python Programming-A modular approach.Pearson</li>
+                    </ol>
+                </div>
+                <div class="desc1">
+                      
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="dataFrame.js"></script>
+    <script>
+        // simulation part 
+
+    // function to change the colour of the text area 
+    var editor = CodeMirror.fromTextArea(document.getElementById('codearea'), {
+    lineNumbers: true,
+    mode: 'text/x-perl',
+    theme: 'abbott',
+});
+// function ends here 
+
+(async function (){return await output})().then(data => {
+    console.log(data);
+    
+},error => {
+    console.log(error);
+    throw error;
+});
+  
+    </script>
+</body>
+
+</html>

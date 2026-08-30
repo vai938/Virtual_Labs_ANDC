@@ -1,0 +1,86 @@
+.circle1,.circle2,.circle3,.circle4,.circle5,.circle6,.circle7,.circle8,.circle9,.circle10 {
+    width: 80px;
+    height:80px;
+    line-height: 80px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    font-family:cursive;
+    /*background-color:*/
+    border: 3px solid grey;
+    display:inline-block;
+}
+
+
+/*.arrow {
+  width: 120px;
+}
+
+.line {
+  margin-top: 14px;
+  width: 90px;
+  background: black;
+  height: 10px;
+  float: left;
+}
+
+.point {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid black;
+  float: right;
+}*/
+
+#number {
+    background: ghostwhite; 
+    font-size: 20px; 
+    font-family: cursive;
+    padding: 5px; 
+    width: 70px;
+    text-align: center;
+    border: 1px solid lightgray; 
+    margin: 50px;
+    margin-left: 400px;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color:orange;
+    border: none;
+    border-radius: 10px;
+    margin-top: -20px;
+    margin-left: 395px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color:coral}
+  
+  .button:active {
+    background-color: coral;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#result {
+    background: ghostwhite; 
+    font-size: 20px; 
+    font-family: cursive;
+    padding: 10px 5px; 
+    width: 300px;
+    text-align: center;
+    border: 1px solid lightgray; 
+    margin: 50px;
+    margin-left: 300px;
+}
+

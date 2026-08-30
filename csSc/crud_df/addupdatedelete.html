@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Data-Frame
+    </title>
+    <link rel="stylesheet" href="dataFrame.css" />
+
+    <link rel="shortcut icon" href="/images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+
+     <!-- setting colour in text  --> 
+     <script language="javascript" type="text/javascript" src="https://codemirror.net/lib/codemirror.js"></script>
+     <script language="javascript" type="text/javascript" src="https://codemirror.net/mode/perl/perl.js"></script>
+     
+     <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css"></link>
+     <link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/abbott.css"></link>
+ 
+      <!-- ended here  -->
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img class="logo" src="/images/logo.png"></div>
+        <h1>V-Lab @ ANDC</h1>
+        <ul class="navigation">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#labs_section">Labs</a></li>
+            <li><a href="/index.html#team">Team</a></li>
+            <li><a href="/https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College
+                    Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>DATA FRAMES</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#practice">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Practice</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#quiz">
+                <img class="icon"
+                    src="https://img.favpng.com/21/11/8/new-york-city-fotolia-stock-photography-sales-png-favpng-f9ZiUMqBcZK0LNfZPfC674ZxZ_t.jpg"><br>
+                Quiz</a>
+        </div>
+        <!-- <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div> -->
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To add, delete and update data in a DataFrame</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1><br>
+                </div>
+                <div class="desc1">
+                    <div class="add_theory">
+                        <h3>What is Adding Rows in DataFrame</h3><br>
+                        <p>The addition of content in the data frame is referred to as adding rows in a dataframe .
+                            There are many ways to add rows in a data frame out of which we detail three different
+                            methods below::</p>
+                        <h4>Sample DataFrame:</h4>
+                        <p class="code_view">
+                            import pandas as pd <br>
+                            info= {<br>
+                            "Num":[12,14,13,12,14,13,15],<br>
+                            "NAME":['John','Camili','Rheana','Joseph','Amanti','Alexa','Siri']<br>
+                            }<br>
+                            data = pd.DataFrame(info)<br>
+                            print("Original Data frame:\n")<br>
+                            print(data)<br>
+                        </p>
+                        <h3 style="padding: 10px 10px;">Method to add data to data frame</h3>
+                        <h4  style="padding: 10px 20px; ">Using Python loc() method to add a single row in the dataframe.</h4>
+                        <p style="padding-left: 20px;">
+                            Python loc() method enables us to add one row at the specified location of the data
+                            frame at a time. In order to add a row at the end of a data frame,
+                            len(dataFrame.index) is used which gives the total number of rows in the data frame. <br>
+                            Syntax: <br>
+                            dataFrame.loc[len(dataFramef.index)]=' values ' <br>
+                            Example: <br>
+                            dataFrame.loc[len(dataFrame.index)] = [ 18 , 'Amit'] <br>
+                        </p>
+                    </div>
+                    <div class="del_thoery">
+                        <h3>What is deleting row in dataframe</h3>
+                        <p style="padding:5px 20px;">The deleting of existing data in the data frame is referred to as deleting. Out of multiple
+                            ways for deleting the content of a data frame, we detail one methods for "Deleting the
+                            DataFrame" below:
+                        </p>
+                        <h3>Method to add data to data frame</h3>
+                        <h4 style="padding: 10px 10px;">Using python drop method to delete a column or row
+                        </h4>
+                        <p style="padding-left: 20px;">The default way to use “drop” to remove columns is to provide the column names to be deleted
+                            along with specifying the “axis” parameter to be 1. <br>
+                            Syntax : <br>
+                            DataFrame.drop(labels=None, axis=0, index=None, columns=None, level=None, inplace=False,
+                            errors='raise')<br>
+                            Example :<br>
+
+                        </p>
+                        <p class="code_view">
+                            data = data.drop(columns="anyName") <br>
+                            data = data.drop(columns=["anyName", "anyOtherName"])<br>
+                            data = data.drop(columns=data.columns[3])<br>
+                            data = data.drop(labels=0, axis=0)<br>
+                            data = data.drop(labels=[1,15,20], axis=0)<br>
+                        </p>
+                    </div>
+                    <div class="updt_theory">
+                        <h3>What is updating single element of row in dataframe</h3>
+                        <p style="padding-left: 30px;">
+                            The modification of existing data in the data frame is referred to as updating. Out of
+                            multiple ways for updating the content of a data frame, we detail four different methods
+                            forn "Updating the DataFrame" below:
+                        </p>
+                        <h3>Method to update data to data frame</h3>
+                        <h4 style="padding: 10px 30px;">Using Python at() method to update a single element of a row</h4>
+                        <p style="padding-left: 40px;">Python at() method enables us to update the value of one element in a data frame at a time .
+                            <br>
+                            Syntax: <br>
+                            dataframe.at[index,'column-name']='new value' <br>
+                            Example: <br>
+                        </p>
+                        <p class="code_view">
+                            df.at[‘Row1’,,'Name']='Siya Agarwal' <br>
+                            df.at[‘Row2’, 'Name']='Nilesh Pandey' <br>
+                            print(df) <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol>
+                        <li>On the first page, a DataFrame is provided that will be used throughout the experiment.</li>
+                        <li>A code section is provided on the left side, where all the sample codes are displayed</li>
+                        <li>A run button is provided at the bottom.
+                        </li>
+                        <li>The output section is given on the right side, where all the generated outputs are
+                            displayed.</li>
+                        <li>Various methods are available in Python to add rows in the dataframe. Hence a list of the
+                            different techniques and their codes is provided in a dropdown menu, which can be accessed
+                            through the "Method" button.</li>
+                        <li>Select the desired method and run the respective code.
+                        </li>
+                        <li>A "Try Yourself" button is also provided to try other code combinations.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="practice">
+                <div class="title">
+                    <h2 class="heading">Practice</h2>
+                </div>
+                <div class="desc1">
+                    <h1 class="instruc">Instructions:</h1>
+                    <p class="detl">Just click the next button to see which element goes to which position.</p>
+                </div>
+                <div class="practice">
+                    <div class="container_add">
+                        <h3>ADD A DATA IN A DATAFRAME</h3>
+                        <h4 style="font-weight: 200;" class="detl-1">On runing:
+                            pandas.DataFrame([[1,2,3],[4,5,6],[7,8,9]],
+                            [0,1,2],['One','Two','Three'] )</h4>
+                        <div class="cont">
+                            <h1 class="anim an--1">[</h1>
+                            <h1 class="anim an--2">[</h1>
+                            <h1 class="anim an--3">1</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--4">2</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--5">3</h1>
+                            <h1 class="anim an--6">]</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--7">[</h1>
+                            <h1 class="anim an--8">4</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--9">5</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--10">6</h1>
+                            <h1 class="anim an--11">]</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--12">[</h1>
+                            <h1 class="anim an--13">7</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--14">8</h1>
+                            <h1>,</h1>
+                            <h1 class="anim an--15">9</h1>
+                            <h1 class="anim an--16">]</h1>
+                            <h1 class="anim an--17">]</h1>
+                        </div>
+                        <div class="tbl">
+                            <table class="table-anim">
+                                <tr>
+                                    <td colspan="4">Name of Columns</td>
+                                </tr>
+                                <tr>
+                                    <td>Row Index</td>
+                                    <td>'One'</td>
+                                    <td>'Two'</td>
+                                    <td>'Three'</td>
+                                </tr>
+                                <tr class="rw--1">
+                                    <td>0</td>
+                                    <td class="tblDt dt--3">1</td>
+                                    <td class="tblDt dt--4">2</td>
+                                    <td class="tblDt dt--5">3</td>
+                                </tr>
+                                <tr class="rw--7">
+                                    <td>1</td>
+                                    <td class="tblDt dt--8">4</td>
+                                    <td class="tblDt dt--9">5</td>
+                                    <td class="tblDt dt--10">6</td>
+                                </tr>
+                                <tr class="rw--12">
+                                    <td>2</td>
+                                    <td class="tblDt dt--13">7</td>
+                                    <td class="tblDt dt--14">8</td>
+                                    <td class="tblDt dt--15">9</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h1 class="obs">Observation</h1>
+                        <div class="observ">
+                            <p class="det det--1"></p>
+                            <p class="det det--2">The start of row 0</p>
+                            <p class="det det--3">The element 1 of sub-list 1 is assigned to [ 0 , 0 ] in the DataFrame
+                            </p>
+                            <p class="det det--4">The element 2 of sub-list 1 is assigned to [ 0 , 1 ] in the DataFrame
+                            </p>
+                            <p class="det det--5">The element 3 of sub-list 2 is assigned to [ 0 , 2 ] in the DataFrame
+                            </p>
+                            <p class="det det--6">The end of row 0</p>
+                            <p class="det det--7">The start of row 1</p>
+                            <p class="det det--8">The element 4 of sub-list 2 is assigned to [ 1 , 0 ] in the DataFrame
+                            </p>
+                            <p class="det det--9">The element 5 of sub-list 2 is assigned to [ 1 , 1 ] in the DataFrame
+                            </p>
+                            <p class="det det--10">The element 6 of sub-list 3 is assigned to [ 1 , 2 ] in the DataFrame
+                            </p>
+                            <p class="det det--11">The end of row 1</p>
+                            <p class="det det--12">The start of row 2</p>
+                            <p class="det det--13">The element 7 of sub-list 3 is assigned to [ 2 , 0 ] in the DataFrame
+                            </p>
+                            <p class="det det--14">The element 8 of sub-list 3 is assigned to [ 2 , 1 ] in the DataFrame
+                            </p>
+                            <p class="det det--15">The element 9 of sub-list 4 is assigned to [ 2 , 2 ] in the DataFrame
+                            </p>
+                            <p class="det det--16">The end of row 2</p>
+                            <p class="det det--17">The end of row 3</p>
+                        </div>
+                        <button class="nxt">Next</button>
+                    </div>
+                    <div class="container-delete">
+                        <b style="padding-left: 60px;">
+                            DELETE A DATA IN A DATAFRAME
+                        </b>
+                        <h4>Python drop() method to delete rows/columns in a DataFrame.</h4>
+                        <h4> Syntax:</h4>
+                        <p class="detl-1">df = pandas.DataFrame([[1,2,3],[4,5,6],[7,8,9]], [0,1,2],['One','Two','Three']
+                            )</p>
+                        <p class="detl-1" style="color: red;" id="del-reflct"> df.drop( 1, axis =0 , inplace = True)</p>
+                        <div class="tbl">
+                            <table class="table-anim">
+                                <tr>
+                                    <td colspan="4">Name of Columns</td>
+                                </tr>
+                                <tr>
+                                    <td>Row Index</td>
+                                    <td>'One'</td>
+                                    <td>'Two'</td>
+                                    <td>'Three'</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr id="del">
+                                    <td>1</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h1 class="obs">Observation</h1>
+                        <div class="observ-uptd detl-1">
+                            <p class="dlt-obs-1">click on delete to delete second row with the help of above dataframe
+                                delete code</p>
+                            <p class="dlt-obs-2" style="display: none;">click on reset for doing it again</p>
+                        </div>
+                        <button id="dlt-btn" onclick="Delete()" class="dlt">DELETE</button>
+                    </div>
+                    <div class="container-update">
+                        <b>
+                            UPDATE A DATA IN A DATAFRAME
+                        </b>
+                        <h4>Python replace() method to update values in a DataFrame.</h4>
+                        <h4> Syntax:</h4>
+                        <p class="detl-1">df = pandas.DataFrame([[1,2,3],[4,5,6],[7,8,9]], [0,1,2],['One','Two','Three']
+                            )</p>
+                        <p class="detl-1" style="color: red;" id="updt-reflct"> df.replace(to_replace =2,value =3)</p>
+                        <div class="tbl">
+                            <table class="table-anim">
+                                <tr>
+                                    <td colspan="4">Name of Columns</td>
+                                </tr>
+                                <tr>
+                                    <td>Row Index</td>
+                                    <td>'One'</td>
+                                    <td>'Two'</td>
+                                    <td>'Three'</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td id="updt-2->3">2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h1 class="obs">Observation</h1>
+                        <div class="observ-uptd detl-1">
+                            <p class="obs-1">chick on update to replace value 2 with 3 with the help of above dataframe
+                                replace code</p>
+                            <p class="obs-2" style="display: none;">click on reset for doing it again</p>
+                        </div>
+                        <button id="updt-btn" onclick="update()" class="updt">Update</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                     <select name="select methods" id="method">
+                        <option value="m1" class="methods">Method 1</option>
+                        <option value="m2" class="methods">Method 2</option>
+                        <option value="m3" class="methods">Method 3</option>
+                        <option value="m4" class="methods">Method 4</option>
+                        <option value="m5" class="methods">Method 5</option>
+                        <option value="m6" class="methods">Method 6</option>
+                    </select>
+                    <span class="desc-p2">Using python loc() method to add row in dataframe.</span>
+                    <!--
+                    <iframe src="https://www.online-python.com/rIVlbs6AC7" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-1 codes"></iframe>
+                    <iframe src="https://www.online-python.com/vIzhYrkgNJ" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-2 codes"></iframe>
+                    <iframe src="https://www.online-python.com/96PIXZ7SxC" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-3 codes"></iframe>
+                    <iframe src="https://www.online-python.com/rB2YdXTGgW" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-4 codes"></iframe>
+                    <iframe src="https://www.online-python.com/9Ed4ieI5w0" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-5 codes"></iframe>
+                    <iframe src="https://www.online-python.com/GYnCs8OJVW" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-6 codes"></iframe> -->
+                        <form action="/runcode" method="post">
+                            <!-- {% csrf_token %} -->
+                            <div class="main">
+                        <div class="form-group" >
+                          <div class="label">
+                          <label for="codearea" id="lb">Code Area</label>
+                        </div>
+                          <div class="input">
+                           
+                          <textarea type="text" class="form-control" id="icodearea" name="codearea" rows="10" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">import pandas as pd
+data ={'Name':['Siya','Nilesh','Amit'
+                ,'Rishabh','Shahnawaz'],
+'Marks':[20,10,15,5,10]} 
+df=pd.DataFrame(data) 
+df.loc[len(df.index)] = ['Amit', 18]
+print(df)                   </textarea>
+                        </div>
+                        </div>
+                      
+                        <div class="form-group" >
+                          
+                          <label for="output" id="out">Output</label>
+                          <div class="output">
+                      
+                          <textarea type="text" class="form-control" id="output" name="output" rows="4" disabled> {{ output }} 
+                          </textarea>
+                        </div>
+                      </div>
+                      </div>
+                        <button type="submit" id="btn1" class="btn btn-primary">Submit</button><br>
+                        <button type="reset" id="btn2" class="btn btn-primary">Reset</button> 
+                        <button type="submit" id="btn3" class="btn btn-primary">Next</button>
+                      </form>
+                    <div style="height: 100px; width: 100px;"></div>
+                </div>
+            </div>
+            <div class="box" id="quiz">
+                <div class="title">
+                    <h2 class="heading" id="quiz1">Quiz</h2>
+                </div>
+
+                <br>
+                <div class="quiz_cont" id="quiz">
+                    <div class="quiz_head">
+                        <h2 id="ques">Q1. In given code dataframe ‘D1’ has ___ rows and ____ columns.<br><br>
+
+                            &nbsp &nbsp import pandas as pd <br>
+                            &nbsp &nbsp LoD = [{‘a’:10, ‘b’:20}, {‘a’:5, ‘b’:10, ‘c’:20},{‘a’:7, ‘d’:10, ‘e’:20}] <br>
+                            &nbsp &nbsp D1 = pd.DataFrame(LoD) <br>
+                            <ul type="none" class="opts"><br>
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    3,3
+                                </li>
+
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    3,5
+                                </li>
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    None of the above
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 id="ques"><br> Q2. Which method is used to add a new row to a DataFrame <br>
+                            <br>
+                            <ul type="none" class="opts">
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    rloc[]
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    iloc[]
+                                </li>
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    loc[]
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 id="ques"> <br> Q3. Which method is used to delete row or column in DataFrame? <br>
+                            <br>
+                            <ul type="none" class="opts">
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    drop()
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    delete()
+                                </li>
+
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    loc[]
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 id="ques"><br> Q4. To delete a row, the parameter axis of function drop( ) is assigned the
+                            value ______
+                            <br>
+
+
+                            <br>
+                            <ul type="none" class="opts">
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    2
+                                </li>
+
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    1
+                                </li>
+
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    3
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 id="ques"><br> Q5. We can use the __ method to merge two DataFrames <br>
+
+
+                            <br>
+                            <ol type="none" class="opts">
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    join()
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    drop()
+                                </li>
+
+
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    append()
+                                </li>
+
+                            </ol>
+                        </h2>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Hence we can add, delete or update data in a DataFrame by any of these methods. Data
+                        represented in table is more preferred over linear arrays.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"><a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">Python
+                            docs
+                            - DataFrame</a></p>
+                    <p class="desc"><a href="https://www.w3schools.com/python/pandas/pandas_dataframes.asp">DataFrame on
+                            w3schools</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="dataFrame.js"></script>
+    <script>
+        // simulation part 
+
+    // function to change the colour of the text area 
+    var editor = CodeMirror.fromTextArea(document.getElementById('codearea'), {
+    lineNumbers: true,
+    mode: 'text/x-perl',
+    theme: 'abbott',
+});
+// function ends here 
+
+(async function (){return await output})().then(data => {
+    console.log(data);
+    
+},error => {
+    console.log(error);
+    throw error;
+});
+  
+    </script>
+</body>
+
+</html>

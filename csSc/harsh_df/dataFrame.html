@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <!-- setting colour in text  --> 
+     <script language="javascript" type="text/javascript" src="https://codemirror.net/lib/codemirror.js"></script>
+     <script language="javascript" type="text/javascript" src="https://codemirror.net/mode/perl/perl.js"></script>
+     
+     <link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css"></link>
+     <link rel="stylesheet" type="text/css" href="https://codemirror.net/theme/abbott.css"></link>
+ 
+      <!-- ended here  -->
+
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Empty Data Frame
+    </title>
+    <link rel="stylesheet" href="dataFrame.css" />
+    <link rel="shortcut icon" href="/images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+
+           
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img class="logo" src="/images/logo.png"></div>
+        <h1>V-Lab @ ANDC</h1>
+        <ul class="navigation">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#labs_section">Labs</a></li>
+            <li><a href="/index.html#team">Team</a></li>
+            <li><a href="/https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College
+                    Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>Creation of DataFrame</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#practice">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Practice</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#quiz">
+                <img class="icon"
+                    src="https://img.favpng.com/21/11/8/new-york-city-fotolia-stock-photography-sales-png-favpng-f9ZiUMqBcZK0LNfZPfC674ZxZ_t.jpg"><br>
+                Quiz</a>
+        </div>
+        <!-- <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div> -->
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To create an empty data frame and add new columns in it (prime number and its square)</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <h4>A DataFrame is similar to an in-memory spreadsheet. Like a spreadsheet:
+                    </h4>
+                    <ul>
+                        <li>A DataFrame stores data in cells.
+                        </li>
+                        <li>A DataFrame has named columns (usually) and numbered rows.
+                        </li>
+                    </ul>
+                    <h4>Features of DataFrame
+                    </h4>
+                    <ul>
+                        <li>Potentially columns are of different types
+                        </li>
+                        <li>Size - Mutable
+                        </li>
+                        <li>Labeled axes (rows and columns)
+                        </li>
+                        <li>Can Perform Arithmetic operations on rows and columns
+                        </li>
+                    </ul><br>
+                    <h2>pandas.DataFrame         </h2>
+                    <h4>A pandas DataFrame can be created using the following constructor -
+                    </h4>
+                    <span>pandas.DataFrame( data, index, columns, dtype, copy)
+                    </span>
+                    <h4>The parameters of the constructor are as follows -
+                    </h4>
+                    <ol>
+                        <li>data:- data takes various forms like ndarray, series, map, lists, dict, constants and also another DataFrame.</li>
+                        <li>index:- For the row labels, the Index to be used for the resulting frame is Optional Default np.arange(n) if no index is passed.
+                        </li>
+                        <li>columns:- For column labels, the optional default syntax is - np.arange(n). This is only true if no index is passed.
+                        </li>
+                        <li>Dtype:- Data type of each column.
+                        </li>
+                        <li>copy:- This command  is used for copying of data, if the default is False.
+                        </li>
+                    </ol><br>
+                    <h2>Create an Empty DataFrame
+                    </h2>
+                    <span>A basic DataFrame, which can be created is an Empty Dataframe.
+                    </span>
+                    <p class="code_view">import pandas as pd <br>
+                        df =pd.DataFrame() <br>
+                        print(df) <br>
+                        </p><br>
+                        <h2>Column Addition
+                        </h2>
+                        <span>We will understand this by adding  column to an existing data frame.</span>
+                        <p class="code_view">import pandas as pd <br>
+                            df =pd.DataFrame()<br>
+                             
+                            # Adding a column to an existing DataFrame<br>
+                            df['Rollno']=[1,2,3,4,5]<br>
+                            df['Name']=['Kunal','Ram','Sahil','Preeti','Raj']<br>
+                            print(df)<br>
+                            </p>
+                            <h3>output</h3>
+                            <table>
+                                <tr>
+                                  <th> </th>
+                                  <th>Rollno</th>
+                                  <th>Name</th>
+                                </tr>
+                                <tr>
+                                  <td>0</td>
+                                  <td>1</td>
+                                  <td>kunal</td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>2</td>
+                                  <td>Ram</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>3</td>
+                                  <td>sahil</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>preeti</td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>5</td>
+                                  <td>Raj</td>
+                                </tr>
+                              </table> <br>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title"><br>
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc2">
+                <ol>
+                    <li>Press start to start the experiment 
+                    </li>
+                    <li>Press next to see the execution of the code
+                    </li>
+                    <li>Relevant line in the code is shown here
+                    </li>
+                    <li>The output of the code shown in the right
+                    </li>
+                </ol><br>
+                <h3>Manual</h3>
+                <span>In this experiment you will understand how to create a data frame and add columns to the data frame.<br>
+                </span>
+                
+                </div>
+            </div>
+            <div class="box" id="practice">
+                <div class="title">
+                    <h2 class="heading">Practice</h2>
+                </div>
+                <div class="desc1">
+                    <h1 class="instruc">Instructions:</h1>
+                    <p class="detl">Just click the next button to see which element goes to which position.</p>
+                    <h2 class="detl-1">On runing: pandas.DataFrame([[1,2,3],[4,5,6],[7,8,9]],
+                        [0,1,2],['One','Two','Three'] )</h2>
+                    <div class="cont">
+                        <h1 class="anim an--1">[</h1>
+                        <h1 class="anim an--2">[</h1>
+                        <h1 class="anim an--3">1</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--4">2</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--5">3</h1>
+                        <h1 class="anim an--6">]</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--7">[</h1>
+                        <h1 class="anim an--8">4</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--9">5</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--10">6</h1>
+                        <h1 class="anim an--11">]</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--12">[</h1>
+                        <h1 class="anim an--13">7</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--14">8</h1>
+                        <h1>,</h1>
+                        <h1 class="anim an--15">9</h1>
+                        <h1 class="anim an--16">]</h1>
+                        <h1 class="anim an--17">]</h1>
+                    </div>
+                    <div class="tbl">
+                        <table class="table-anim">
+                            <tr>
+                                <td colspan="4">Name of Columns</td>
+                            </tr>
+                            <tr>
+                                <td>Row Index</td>
+                                <td>'One'</td>
+                                <td>'Two'</td>
+                                <td>'Three'</td>
+                            </tr>
+                            <tr class="rw--1">
+                                <td>0</td>
+                                <td class="tblDt dt--3">1</td>
+                                <td class="tblDt dt--4">2</td>
+                                <td class="tblDt dt--5">3</td>
+                            </tr>
+                            <tr class="rw--7">
+                                <td>1</td>
+                                <td class="tblDt dt--8">4</td>
+                                <td class="tblDt dt--9">5</td>
+                                <td class="tblDt dt--10">6</td>
+                            </tr>
+                            <tr class="rw--12">
+                                <td>2</td>
+                                <td class="tblDt dt--13">7</td>
+                                <td class="tblDt dt--14">8</td>
+                                <td class="tblDt dt--15">9</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h1 class="obs">Observation</h1>
+                    <span class="observ">
+                        <p class="det det--1"></p>
+                        <p class="det det--2">The start of row 0</p>
+                        <p class="det det--3">The element 1 of sub-list 1 is assigned to [ 0 , 0 ] in the DataFrame</p>
+                        <p class="det det--4">The element 2 of sub-list 1 is assigned to [ 0 , 1 ] in the DataFrame</p>
+                        <p class="det det--5">The element 3 of sub-list 2 is assigned to [ 0 , 2 ] in the DataFrame</p>
+                        <p class="det det--6">The end of row 0</p>
+                        <p class="det det--7">The start of row 1</p>
+                        <p class="det det--8">The element 4 of sub-list 2 is assigned to [ 1 , 0 ] in the DataFrame</p>
+                        <p class="det det--9">The element 5 of sub-list 2 is assigned to [ 1 , 1 ] in the DataFrame</p>
+                        <p class="det det--10">The element 6 of sub-list 3 is assigned to [ 1 , 2 ] in the DataFrame</p>
+                        <p class="det det--11">The end of row 1</p>
+                        <p class="det det--12">The start of row 2</p>
+                        <p class="det det--13">The element 7 of sub-list 3 is assigned to [ 2 , 0 ] in the DataFrame</p>
+                        <p class="det det--14">The element 8 of sub-list 3 is assigned to [ 2 , 1 ] in the DataFrame</p>
+                        <p class="det det--15">The element 9 of sub-list 4 is assigned to [ 2 , 2 ] in the DataFrame</p>
+                        <p class="det det--16">The end of row 2</p>
+                        <p class="det det--17">The end of row 3</p>
+                    </span>
+                    <button class="nxt">Next</button>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                    <select name="select methods" id="method">
+                        <option value="m1" class="methods">Method 1</option>
+                        <option value="m2" class="methods">Method 2</option>
+                        <option value="m3" class="methods">Method 3</option>
+                        <option value="m4" class="methods">Method 4</option>
+                        <option value="m5" class="methods">Method 5</option>
+                        <option value="m6" class="methods">Method 6</option>
+                    </select>
+                    <span class="desc-p2">Adding columns using lists.</span>
+                    <!-- <iframe id="frame" src="https://www.online-python.com/rIVlbs6AC7" width="100%" height="700" frameborder="2" 
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-1 codes"></iframe>
+                    <iframe src="https://www.online-python.com/vIzhYrkgNJ" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-2 codes"></iframe>
+                    <iframe src="https://www.online-python.com/96PIXZ7SxC" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-3 codes"></iframe>
+                    <iframe src="https://www.online-python.com/rB2YdXTGgW" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-4 codes"></iframe>
+                    <iframe src="https://www.online-python.com/9Ed4ieI5w0" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-5 codes"></iframe>
+                    <iframe src="https://www.online-python.com/GYnCs8OJVW" width="100%" height="700" frameborder="2"
+                        marginwidth="0" marginheight="0" allowfullscreen class="code-6 codes"></iframe>
+                    <div style="height: 100px; width: 100px;"></div> -->
+
+                    <form action="/runcode" method="post">
+                        <!-- {% csrf_token %} -->
+                        <div class="main">
+                    <div class="form-group" >
+                      <div class="label">
+                      <label for="codearea" id="lb">Code Area</label>
+                    </div>
+                      <div class="input">
+                       
+                      <textarea type="text" class="form-control" id="icodearea" name="codearea" rows="10" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">import pandas as pd
+df =pd.DataFrame()
+df['Rollno']=[1,2,3,4,5]
+df['Name']=['Kunal','Ram','Sahil','Preeti','Raj']
+print(df)</textarea>
+                    </div>
+                    </div>
+                  
+                    <div class="form-group" >
+                      
+                      <label for="output" id="out">Output</label>
+                      <div class="output">
+                  
+                      <textarea type="text" class="form-control" id="output" name="output" rows="4" disabled> {{ output }} 
+                      </textarea>
+                    </div>
+                  </div>
+                  </div>
+                    <button type="submit" id="btn1" class="btn btn-primary">Submit</button><br>
+                    <button type="reset" id="btn2" class="btn btn-primary">Reset</button> 
+                    <button type="submit" id="btn3" class="btn btn-primary">Next</button>
+                  </form>
+                </div>
+            </div>
+
+            <div class="box" id="quiz">
+                <div class="title">
+                    <h2 class="heading" id="quiz1">Quiz</h2>
+                </div>
+
+                <br>
+                <div class="quiz_cont" id="quiz">
+                    <div class="quiz_head">
+                        <h2 class="ques">Q1. Which of the following python libraries are used to create a dataframe:-
+                            <br><br>
+
+                            <!-- &nbsp &nbsp import pandas as pd <br>
+                            &nbsp &nbsp LoD = [{‘a’:10, ‘b’:20}, {‘a’:5, ‘b’:10, ‘c’:20},{‘a’:7, ‘d’:10, ‘e’:20}] <br>
+                            &nbsp &nbsp D1 = pd.DataFrame(LoD) <br> -->
+                            <ul type="none" class="opts"><br>
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    matplotlib
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    numpy
+                                </li>
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    pandas
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 class="ques"><br> Q2. Which of the following is the correct syntax to create an empty dataframe :-<br>
+                            <br>
+                            <ul type="none" class="opts">
+                                <li  onclick="selected(this)" class="wrng-ans">
+                                    pd.dataframe(data)
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    pd.df(data)
+                                </li>
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    pd.DataFrame(date)
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 class="ques"> <br> Q3. What is the correct syntax to add a column in a dataframe :-<br>
+                            <br>
+                            <ul type="none" class="opts">
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    df[“Name”] = np.arange(10)
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    df.Name = np.arange(10)
+                                </li>
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    df[Name] = np.arange(10)
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 class="ques"><br>Q4. What is  the output of the following code:-
+                            <br>
+                            &nbsp &nbsp Df = pd.DataFrame() <br>
+                            &nbsp &nbsp  Df[“Numbers”] = np.arange(3)<br>
+                            &nbsp &nbsp Df[“Square”] = Df[“Numbers”]*Df[“Numbers”]<br>
+                            &nbsp &nbsp print(Df)
+                            <br>
+                            <ul type="none" class="opts">
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    <table >
+                                        <tr>
+                                          <th> </th>
+                                          <th>Number</th>
+                                          <th>Square</th>
+                                        </tr>
+                                        <tr>
+                                          <td>0</td>
+                                          <td>1</td>
+                                          <td>1</td>
+                                        </tr>
+                                        <tr>
+                                          <td>1</td>
+                                          <td>2</td>
+                                          <td>4</td>
+                                        </tr>
+                                        <tr>
+                                          <td>2</td>
+                                          <td>3</td>
+                                          <td>9</td>
+                                        </tr>
+                                      </table> 
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    <table>
+                                        <tr>
+                                          <th>Number</th>
+                                          <th>Square</th>
+                                          <th> </th>
+                                        </tr>
+                                        <tr>
+                                          <td>0</td>
+                                          <td>1</td>
+                                          <td>1</td>
+                                        </tr>
+                                        <tr>
+                                          <td>1</td>
+                                          <td>2</td>
+                                          <td>4</td>
+                                        </tr>
+                                        <tr>
+                                          <td>2</td>
+                                          <td>3</td>
+                                          <td>9</td>
+                                        </tr>
+                                      </table> 
+                                </li>
+
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    <table>
+                                        <tr>
+                                          <th>Square</th>
+                                          <th>Number</th>
+                                          <th> </th>
+                                        </tr>
+                                        <tr>
+                                          <td>0</td>
+                                          <td>1</td>
+                                          <td>1</td>
+                                        </tr>
+                                        <tr>
+                                          <td>1</td>
+                                          <td>2</td>
+                                          <td>4</td>
+                                        </tr>
+                                        <tr>
+                                          <td>2</td>
+                                          <td>3</td>
+                                          <td>9</td>
+                                        </tr>
+                                      </table> 
+                                </li>
+
+                            </ul>
+                        </h2>
+                        <h2 class="ques"><br> Q5. We can use the __ method to merge two DataFrames <br>
+
+
+                            <br>
+                            <ol type="none" class="opts">
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    join()
+                                </li>
+
+                                <li onclick="selected(this)" class="wrng-ans">
+                                    drop()
+                                </li>
+
+
+                                <li onclick="selected(this)" class="rigt-ans">
+                                    append()
+                                </li>
+
+                            </ol>
+                        </h2>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"><a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">Python
+                            docs - DataFrame</a></p>
+                    <p class="desc"><a href="https://www.w3schools.com/python/pandas/pandas_dataframes.asp">DataFrame on
+                            w3schools</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="dataFrame.js"></script>
+    <script >
+         
+        // simulation part 
+
+    // function to change the colour of the text area 
+    var editor = CodeMirror.fromTextArea(document.getElementById('codearea'), {
+    lineNumbers: true,
+    mode: 'text/x-perl',
+    theme: 'abbott',
+});
+// function ends here 
+
+(async function (){return await output})().then(data => {
+    console.log(data);
+    
+},error => {
+    console.log(error);
+    throw error;
+});
+  
+    
+    </script>
+</body>
+
+</html>
