@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgba(238, 234, 234, 0.603);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+::selection{
+    background: cyan;
+    color: darkblue;
+}
+header {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(0, 52, 65);
+    text-align: center;
+}
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+    gap: 20px;
+}
+header .logo {
+    height: 4rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+header div h1 {
+    font-size: 1.4rem;
+    color: white;
+}
+header .navigation {
+    display: flex;
+    flex-direction: row;
+}
+header .navigation{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+header .navigation li {
+    font-size: 20px;
+    list-style: none;
+    margin-left: 20px;
+    padding: 13px 20px;
+}
+header .navigation li:hover{
+    background: rgba(0, 139, 139, 0.74);
+    cursor: pointer;
+    border-radius: 6px;
+}
+header .navigation li a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 3px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.heading{
+    padding: 30px 0px 20px 0px;
+    text-align: center;
+}
+.foreword{
+    /* width: 90%; */
+    margin: 10px auto 20px auto;
+    border: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: aliceblue;
+}
+.foreword h4 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.foreword p {
+    margin-top: 10px;
+    margin-left: 7px;
+}
+li{
+    margin-top: 10px;
+    /* margin-left: 5px; */
+    /* text-align: center;*/
+}
+.form{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.col{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+input {
+    text-align: center;
+    height: 22px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px 2px rgb(68, 68, 68),1px 2px 1px 2px rgb(197, 197, 197);
+}
+#submit,#reset,#gender{
+    text-align: center;
+    background-color: black;
+    color: rgb(244, 255, 251);
+    font-size: 1rem;    
+    width: 80px;
+    height: 33px;
+    border: 2px solid yellow;
+    border-radius: 8px;
+}
+#gender{
+    width: 100px;
+}
+.graph-area{
+    display: block;
+    margin: 40px auto 0px auto;
+    gap: 40px;
+    height: 300px;
+    width: 50%;
+}
+@media screen and (max-width: 768px) {
+    header {
+        height: 15vh;
+        width: 100%;
+        background: rgb(0, 52, 65);
+    }
+    header div{
+        display: flex;
+        flex-direction: column;
+        /* width: 100%; */
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+    header .logo {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    header div h1 {
+        font-size: 0.5rem;
+        color: white;
+        /* width: 100%; */
+        margin-top: 10px;
+    }
+    header .navigation{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header .navigation li {
+        font-size: 12px;
+        list-style: none;
+        margin-left: 20px;
+        padding: 8px 1px;
+    }
+    header .navigation li:hover{
+        background: rgba(0, 139, 139, 0.74);
+        cursor: pointer;
+        border-radius: 6px;
+    }
+    header .navigation li a {
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: 400;
+        border-radius: 3px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header div h1{
+        font-size: 0.8rem;
+    }
+    header .navigation li{
+        font-size: 0.6rem;
+    }
+    .graph-area{
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+    }
+}

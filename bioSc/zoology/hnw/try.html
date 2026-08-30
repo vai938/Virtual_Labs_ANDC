@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 40%;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="table-container">
+
+    </div> -->
+
+    <!-- <script>
+        fetch('male-data.csv').then(function(response){
+            return response.text();
+        }).then(function(data){
+    var table_container = document.getElementById('table-container');
+    csv_string_to_table(data, table_container);
+    });
+    function csv_string_to_table(csv_string, element_to_insert_table) {
+    var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
+    var table = '';
+    var table_rows = '';
+    var table_header = '';
+
+    rows.forEach(function(row, row_index) {
+        var table_columns = '';
+        var columns = row.split(','); // split/separate the columns in a row
+        columns.forEach(function(column, column_index) {
+            table_columns += row_index == 0 ? '<th>' + column + '</th>' : '<td>' + column + '</td>';
+        });
+        if (row_index == 0) {
+            table_header += '<tr>' + table_columns + '</tr>';
+        } else {
+            table_rows += '<tr>' + table_columns + '</tr>';
+        }
+    });
+
+    table += '<table>';
+        table += '<thead>';
+            table += table_header;
+        table += '</thead>';
+        table += '<tbody>';
+            table += table_rows;
+        table += '</tbody>';
+    table += '</table>';
+
+    element_to_insert_table.innerHTML += table;
+}
+    </script> -->
+    <div>
+        <canvas id="myChart" height=400px width=400px></canvas>
+    </div>
+    <script>
+        const labels = Utils.months({ count: 7 });
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First Dataset',
+                data: [65, 59, 80, 81, 56, 55, 40],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)'
+                ],
+                borderColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 159, 64)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)',
+                    'rgb(153, 102, 255)',
+                    'rgb(201, 203, 207)'
+                ],
+                borderWidth: 1
+            }]
+        };
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            },
+        };
+    </script>
+    <script>
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+      </script>
+</body>
+
+</html>

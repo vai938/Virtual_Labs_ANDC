@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hnwsim.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Height and Weight Analysis</title>
+</head>
+
+<body>
+    <header>
+        <div><img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <div class="heading">
+            <h1>Height and Weight Analysis Lab</h1>
+        </div>
+        <div class="foreword">
+            <h4>Instructions</h4>
+                <p>
+                    1. Please provide your details such as, Name, Gender, Height, Weight.
+                </p>
+                <p>
+                    2. Click on submit to analyze the data given by you and stored on the server.
+                </p>
+                <p>
+                    3. You will see results on the basis of your detals.
+                </p>
+        </div>
+        <div class="form">
+            <div class="col">
+                <label for="name">Your Name:-</label>
+                <input type="text" name="" id="name" value="" required autocomplete="off">
+            </div>
+            <div class="col">
+                <label for="gender">Your Gender:-</label>
+                <select name="" id="gender">
+                    <option value="null">Click Here</option>
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="height">Your Height:-</label>
+                <input type="text" name="" id="height" required autocomplete="off">
+            </div>
+            <div class="col">
+                <label for="weight">Your Weight:-</label>
+                <input type="text" name="" id="weight" required autocomplete="off">
+            </div>
+            <div class="col">
+                <button id="submit">Submit</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        <div class="table-holder">
+            <div class="table-main">
+
+            </div>
+            <div class="table-analyze">
+            </div>
+        </div>
+        <div class="graph-area">
+            <canvas id="myChart"></canvas><br><br>
+            <canvas id="myChart2"></canvas>
+        </div>
+    </section>
+
+    <script src="hnwsim.js"></script>
+</body>
+
+</html>

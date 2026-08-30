@@ -1,0 +1,750 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(0, 52, 65);
+  text-align: center;
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+header .logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+header > div > h1 {
+  font-size: 1.5rem;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+header .navigation li {
+  font-size: 20px;
+  list-style: none;
+  margin-left: 20px;
+  padding: 13px 20px;
+}
+
+header .navigation li:hover {
+  background: rgba(0, 139, 139, 0.74);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+header .navigation li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 3px;
+}
+
+.sim--head {
+  border: 2px solid rgb(0, 52, 65);
+  background: rgb(0, 52, 65);
+  width: 60%;
+  height: 60px;
+  display: block;
+  margin-top: 10px;
+  margin-left: 4%;
+}
+
+.head--det {
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 10px;
+  left: 240px;
+  display: inline-block;
+  position: absolute;
+}
+
+nav {
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 350px;
+  height: auto;
+  background: rgb(0, 30, 37);
+  margin: 0% 50px 20px;
+  float: right;
+  justify-content: space-around;
+  font-weight: bold;
+  color: honeydew;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+nav .boxq {
+  transition: 0.4s ease;
+  height: 100px;
+  width: 115px;
+  text-align: center;
+  margin: 1rem;
+  border: 2px solid rgb(236, 236, 236);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+nav .boxq:hover {
+  background: rgba(0, 255, 255, 0.589);
+  color: white;
+}
+
+nav .boxq a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: white;
+}
+
+nav .boxq a img {
+  margin-bottom: 2px;
+}
+
+.icon {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.sim--head-full {
+  border: 2px solid rgb(0, 52, 65);
+  background: rgb(0, 52, 65);
+  font-size: 2rem;
+  color: white;
+  padding: 20px 20px;
+}
+
+.full-sc {
+  width: 80px;
+  height: 45px;
+  position: relative;
+  top: 14.8%;
+  left: 25%;
+  cursor: pointer;
+}
+
+.full-sc-click {
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  top: 3.8%;
+  right: 25px;
+  cursor: pointer;
+}
+
+.ins {
+  font-size: 1.5rem;
+  position: relative;
+  width: 130%;
+  top: 15px;
+  left: 40px;
+  margin-bottom: 40px;
+  z-index: 100;
+  font-weight: bold;
+}
+
+.creator {
+  font-size: 1.5rem;
+  position: relative;
+  width: 140%;
+  top: 20px;
+  line-height: 40px;
+  left: 40px;
+  margin-bottom: 40px;
+  z-index: 100;
+  font-weight: bold;
+}
+.set1 {
+  position: absolute;
+  top: 84.5%;
+  width: 700px;
+  left: 7.5%;
+}
+.setFull,
+.ifMatch {
+  z-index: 100;
+  display: none;
+}
+.eleStyle {
+  height: 80px;
+  width: 80px;
+}
+#bhai1 {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+}
+#bhai2 {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+}
+#bhai3 {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+}
+#bhai4 {
+  position: absolute;
+  top: 24%;
+  left: 21%;
+}
+#bhai5 {
+  position: absolute;
+  top: 44%;
+  left: 31%;
+}
+#bhai6 {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+}
+#bhai7 {
+  position: absolute;
+  top: 40%;
+  left: 16%;
+}
+
+.lacOpBackground {
+  width: 700px;
+  height: 600px;
+  margin-left: 100px;
+  margin-top: 50px;
+  box-shadow: 3px 3px 5px 2px rgba(200, 200, 200, 0.4),
+    -2px -2px 5px 2px rgba(200, 200, 200, 0.4);
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.lacOpBackground-full {
+  width: 700px;
+  -webkit-user-drag: none;
+  height: 600px;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 5px 2px rgba(200, 200, 200, 0.4),
+    -2px -2px 5px 2px rgba(200, 200, 200, 0.4);
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.forward {
+  cursor: not-allowed;
+  display: block;
+  margin-top: 6%;
+  width: 80px;
+  height: 40px;
+  font-size: 1.3rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgb(218, 218, 218);
+  box-shadow: 2px 2px 2px 1px rgb(212, 212, 212);
+}
+
+.selectM {
+  padding: 5px 10px;
+  font-size: 1rem;
+  background: rgb(0, 52, 65);
+  color: white;
+  border-radius: 8px;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+.sel {
+  font-size: 1.5rem;
+  margin-top: 10%;
+  margin-left: 10%;
+  display: block;
+}
+.rpm-val,
+.instruct {
+  font-size: 1.6rem;
+  margin-top: 10%;
+  margin-bottom: 6%;
+  margin-left: 10%;
+  display: block;
+}
+.instruct-info {
+  font-size: 1.2rem;
+}
+.btn {
+  width: 80px;
+  height: 40px;
+  font-size: 1.3rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgb(212, 212, 212);
+}
+
+.btnYo {
+  display: none;
+  width: 120px;
+  height: 40px;
+  font-size: 1.3rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgb(212, 212, 212);
+}
+
+.container-background {
+  position: absolute;
+  right: 2%;
+  top: 16%;
+  width: 25%;
+  border: 2px solid rgba(31, 205, 228, 0.207);
+  border-radius: 20px;
+  background: rgba(31, 205, 228, 0.207);
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%), 0 0px 20px 0 rgb(0 0 0 / 19%);
+  height: 75vh;
+}
+.hand {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 300px;
+  left: 170px;
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    margin: 24px 20px;
+  }
+
+  header {
+    height: 10vh;
+    width: 100%;
+    background: rgb(0, 52, 65);
+  }
+
+  header .logo {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  header div {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    justify-content: center;
+    /* gap: 1rem; */
+  }
+
+  header div h1 {
+    font-size: 1rem;
+    color: white;
+    /* width: 100%; */
+    margin-top: 10px;
+  }
+
+  header .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .navigation li {
+    font-size: 12px;
+    list-style: none;
+    margin-left: 20px;
+    padding: 8px 1px;
+  }
+
+  header .navigation li:hover {
+    background: rgba(0, 139, 139, 0.74);
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  header .navigation li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 3px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .head--det {
+    font-size: 1.3rem;
+  }
+
+  .full-sc {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lacOpBackground {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    margin: 24px 20px;
+  }
+
+  header {
+    height: 20vh;
+    width: 100%;
+    background: rgb(0, 52, 65);
+  }
+
+  header .logo {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header div h1 {
+    font-size: 1rem;
+    color: white;
+    margin-top: 10px;
+  }
+
+  header .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .navigation li {
+    font-size: 12px;
+    list-style: none;
+    margin-left: 20px;
+    padding: 8px 1px;
+  }
+
+  header .navigation li:hover {
+    background: rgba(0, 139, 139, 0.74);
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  header .navigation li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 3px;
+  }
+
+  .head--det {
+    font-size: 1.02rem;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+
+  .full-sc {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sim--head {
+    width: 50%;
+    margin-top: 5px;
+    height: 9vh;
+    margin-left: 160px;
+  }
+
+  .lac_operon {
+    width: 350px;
+    margin-top: 10px;
+    margin-left: 160px;
+    height: 230px;
+  }
+
+  .sim--head-full {
+    height: 4vh;
+    padding-top: 30px;
+  }
+
+  .full-sc-click {
+    height: 8vh;
+    top: 10px;
+  }
+
+  .lacOpBackground-full {
+    width: 410px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 300px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .btn,
+  .forward {
+    width: 32px;
+    height: 18px;
+    font-size: 0.6rem;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .btnYo {
+    width: 50px;
+    height: 18px;
+    font-size: 0.6rem;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .slider {
+    height: 3px;
+    border-radius: 10px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 8%;
+    border-radius: 60px;
+    height: 10px;
+  }
+
+  .instruct,
+  .instruct-info {
+    font-size: 0.6rem;
+  }
+
+  .instruct {
+    margin-bottom: 1px;
+  }
+
+  .instruct-info {
+    line-height: 5px;
+  }
+
+  nav {
+    display: none;
+  }
+  .overlay,
+  .error {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btnOk1 {
+    font-size: 1rem;
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    padding: 3px 6px;
+    border: 1.6px solid black;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header div {
+    margin-top: 5px;
+    width: 45%;
+  }
+
+  header div h1 {
+    font-size: 0.9rem;
+  }
+
+  .htt-ja {
+    height: 10vh;
+  }
+
+  header .navigation li {
+    font-size: 0.7rem;
+  }
+
+  .head--det {
+    margin-left: -10px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+
+  .sim--head {
+    display: flex;
+    margin-left: 60px;
+    width: 70vw;
+    height: 4vh;
+  }
+
+  .full-sc {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 11%;
+    left: 70%;
+  }
+
+  .lac_operon {
+    width: 250px;
+    height: 220px;
+    margin-left: 60px;
+  }
+
+  nav {
+    margin-left: -110px;
+    float: none;
+    margin-left: 50px;
+  }
+
+  .btnOk {
+    font-size: 1rem;
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    padding: 3px 6px;
+    border: 1.6px solid black;
+  }
+
+  .error {
+    position: fixed;
+    display: block;
+    top: 50%;
+    left: 50%;
+    font-size: 1.1rem;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(0 65 65);
+    padding: 15px;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 20000;
+    transition: all 0.5s;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    transition: all 0.5s;
+  }
+}
+
+.btnOk,
+.btnOk1 {
+  font-size: 1rem;
+  border-radius: 10%;
+  margin-left: auto;
+  cursor: pointer;
+  display: block;
+  color: black;
+  background-color: white;
+  padding: 3px 6px;
+  border: 1.6px solid black;
+}
+
+.btnOk1 {
+  display: none;
+}
+
+.error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 1.2rem;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(0 65 65);
+  padding: 20px 30px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 20000;
+  transition: all 0.5s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  transition: all 0.5s;
+}
