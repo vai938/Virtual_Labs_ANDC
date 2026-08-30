@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euler's method</title>
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/euler-sim.css">
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="heading">
+        <div class="heading--1">
+            <h1>Euler's method</h1>
+        </div>
+        <div class="heading--2">
+            <h1>For solving ODE (Ordinary Differential Equation)</h1>
+        </div>
+    </div>
+    <div class="transe">
+        <div class="explanation">
+            <p class="desc">Let dS(t)dt=F(t,S(t)) be an explicitly defined first order ODE. That is, F is a function that returns the derivative, or change, of a state given a time and state value. Also, let t be a numerical grid of the interval [t0,tf] with spacing h. Without loss of generality, we assume that t0=0, and that tf=N * h for some positive integer, N.
+                The linear approximation of S(t) around tj at t(j+1) is <br> <br>
+            <img src="images/eu-img5.png" alt="">
+        <br> <br>
+        This formula is called the Explicit Euler Formula, and it allows us to compute an approximation for the state at S(tj+1) given the state at S(tj). Starting from a given initial value of S0=S(t0), we can use this formula to integrate the states up to S(tf); these S(t) values are then an approximation for the solution of the differential equation. <br> <br> The Explicit Euler formula is the simplest and most intuitive method for solving initial value problems. At any state (tj,S(tj)) it uses F at that state to “point” toward the next state and then moves in that direction a distance of h. Although there are more sophisticated and accurate methods for solving these problems, they all have the same fundamental structure. As such, we enumerate explicitly the steps for solving an initial value problem using the Explicit Euler formula.</p>
+        </div>
+        <div class="bisection-method">
+            <label for="">Enter the function:</label>
+            <input type="text" class="check"> <br>
+            <label for="lower limit">Initial value of x:</label>
+            <input type="text" class="lowerLim"><br>
+            <label for="upper limit">Initial value of y:</label>
+            <input type="text" class="upperLim"> <br>
+            <label for="interval">Iterations:</label>
+            <input type="text" class="intrvl"> <br>
+            <label for="interval">Final value of x:</label>
+            <input type="text" class="ds"> <br>
+            <label for="rootGenerate">For solving ODE: </label>
+            <button class="btn--cls sub">Click here</button>
+
+            <div class="result">
+                <span class="validRange1">Result: </span><span class="eqnResult1"></span>
+            </div>
+            <button id="file--download1" class="btn--cls">File Download</button><br>
+            <label for="gtext">Graph:</label>
+        </div>
+    </div>
+    <div class="aadha">
+        <div id="graph">
+        </div>
+    </div>
+
+    <script src="js/euler-sim.js"></script>
+</body>
+
+</html>

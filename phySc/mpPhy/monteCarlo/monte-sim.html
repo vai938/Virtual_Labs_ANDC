@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Carlo Method</title>
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style_monte-sim.css">
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+    <style>
+        #canvas1 {
+            display: flex;
+            border: 3px solid orange;
+            background: black;
+            margin: auto;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="myHead">
+            <div class="heading--1">
+                <h1>Calculating Pi(π)</h1>
+            </div>
+            <div class="heading--2">
+                <h1> Using Monte Carlo Simulation
+            </div>
+        </div>
+        <div class="explanation">
+            <h3>How it Works:</h3> <br>
+            The Monte Carlo method is a method of computing Pi(π). The way it works is by creating a
+            small
+            circle inside a square. The square should have a circle in it that covers it from top to bottom. A
+            small
+            arc will be placed in a random location of this square.
+            If the arc lands inside of the circle, the amount of circles inside increments by one. To calculate
+            π
+            you must do the following formula:
+            <div class="math1">
+                &#960; = 4 × (Points Inside Circle ÷ Total Points)
+            </div>
+            The higher the values of the points the closer it is to π. Enter total number of points and press
+            Start button to start the
+            simulation.
+        </div>
+        <div class="monte-method">
+            <canvas id="canvas1">
+                This is a simulation
+            </canvas>
+            <input type="number" name="inputnumber" id="inp1" value="" placeholder="Enter the number of point you want">
+            <div class="btn">
+                <button id="start">Start</button>
+            </div>
+            <div id="click_downlsoad">
+                <button id="click_download">File Download</button>
+            </div>
+            <table>
+                <tr>
+                    <th>Points Inside:</th>
+                    <th>Points Outside:</th>
+                    <th>Total Points:</th>
+                </tr>
+                <tr>
+                    <td id="inside">0</td>
+                    <td id="outside">0</td>
+                    <td id="total">0</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Estimated value of Pi(π) is</th>
+                </tr>
+                <tr>
+                    <td id="pi">0</td>
+                </tr>
+            </table>
+            <div id="graph">
+            </div>
+        </div>
+    </div>
+    <script src="js/mnty.js"></script>
+</body>
+
+</html>

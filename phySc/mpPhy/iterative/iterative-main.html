@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Finding roots by Iterative-Method
+    </title>
+    <link rel="stylesheet" href="css/iterative-main.css" />
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1> Iterative method for finding roots of polynomials</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">For finding the roots of linear, quadratic and third degree polynomial using
+                        Iterative-Method</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                    <p class="desc">The fixed point iteration method in numerical analysis is used to find an
+                        approximate solution to algebraic and transcendental equations. Sometimes, it becomes very
+                        tedious to find solutions to cubic, bi-quadratic and transcendental equations; then, we can
+                        apply specific numerical methods to find the solution; one among those methods is the fixed
+                        point iteration method.</p>
+
+                    <p class="desc">
+                        The fixed point iteration method uses the concept of a fixed point in a repeated manner to
+                        compute the solution of the given equation. A fixed point is a point in the domain of a function
+                        g such that g(x) = x. In the fixed point iteration method, the given function is algebraically
+                        converted in the form of g(x) = x.
+                    </p>
+                    <p class="desc">
+                        Suppose we have an equation f(x) = 0, for which we have to find the solution. The equation can be expressed as x = g(x). Choose g(x) such that |g'(x)| < 1 at x = xo where xo,is some initial guess called fixed point iterative scheme. Then the iterative method is applied by successive approximations given by xn = g(xn - 1), that is, x1 = g(xo), x2 = g(x1) and so on.
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Enter the coefficients of the polynomial. </li>
+                        <li>Choose the initial value xo for the iterative method. One way to choose xo is to find the values x = a and x = b for which f(a) < 0 and f(b) > 0. By narrowing down the selection of a and b, take xo as the average of a and b.</li>
+                        <li>Express the given equation, in the form x = g(x) such that |g'(x)| < 1 at x = xo. If there more than one possibility of g(x), choose the g(x) which has the minimum value of g'(x) at x = xo.</li>
+                        <li>By applying the successive approximations xn = g(xn - 1), if f(x) is a continuous function, we get a sequence of {xn} which converges to a point x, which is the approximate solution of the given equation.</li>
+                        <li>Terminate.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                </div>
+                <pre>
+                        <code class="language-python line-numbers">
+                            # Python program for implementation of Iteration-Method for algebraic equations 
+                            # Taking input for the guess
+                            a= float(input("Enter the value a: "))
+                            b= 0
+                            # Function is defined here: 2*x**3-2*x-5
+                            def iterative(x):
+                                return ((2*x+5)/2)**1/3
+                            
+                            # Root of the function is calculated here..
+                            for i in range(10):
+                                b= iterative(a)
+                                a=b
+                            
+                            # Root is displayed here.
+                            print("Root of the given function is ",b)
+
+                        </code>
+                    </pre>
+
+            </div>
+            <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div>
+                <a href="iterative-sim.html" target=_blank>
+                    <div class="desc1">
+                        <p class="desc">To calculate value of roots from Iteration-Method.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box" id="observation">
+                <div class="title">
+                    <h2 class="heading">Observations</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Take Observations from the method and tabulate it for the given intervals.
+                </div>
+                <div class="desc1">
+                    <p class="desc">Plot a graph also. (function vs root).
+                </div>
+                <img src="images/iterative-graph.png" class="sec-img2" />
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Hence we findout the roots for the given polynomial.</p>
+                </div>
+                <div class="desc1">
+                        <ol class="desc">
+                            <li>The form of x = g(x) can be chosen in many ways. But we choose g(x) for which |g'(x)| < 1 at x = xo.</li>
+                            <li>By the fixed-point iteration method, we get a sequence of xn, which converges to the root of the given equation.</li>
+                            <li>Lower the value of g'(x), fewer the iterations are required to get the approximate solution.</li>
+                            <li>The rate of convergence is more if the value of g'(x) is smaller.</li>
+                            <li>The method is useful for finding the real roots of the equation, which is the form of an infinite series.</li>
+                        </ol>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"><a href='https://byjus.com/maths/fixed-point-iteration/' target="_blank">Iteration-Method
+                            Byju's</a></p>
+                    <p class="desc"><a
+                            href="https://en.wikipedia.org/wiki/Root-finding_algorithms" target="_blank" >wikipedia</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

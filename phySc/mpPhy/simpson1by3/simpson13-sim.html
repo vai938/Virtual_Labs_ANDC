@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpson 1/3 method</title>
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/simpson13-sim.css">
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="heading">
+        <div class="heading--1">
+            <h1>Simpson 1/3 method</h1>
+        </div>
+        <div class="heading--2">
+            <h1>For performing numerical integration </h1>
+        </div>
+    </div>
+    <div class="transe">
+        <div class="explanation">
+            <p class="desc"> We can get a quick approximation for definite integrals when we divide a small interval [a, b]
+                into two parts. Therefore, after dividing the interval, we get; <br>
+
+                x0= a, x1= a + b, x2 = b <br><br>
+
+                Hence, we can write the approximation as; <br><br>
+
+                a∫b f(x) dx ≈ S2 = h/3[f(x0) + 4f(x1) + f(x2)] <br><br>
+
+                S2 = h/3 [f(a) + 4 f((a+b)/2) + f(b)] <br><br>
+
+                Where h = (b - a)/2 <br><br>
+
+                This is the Simpson's 1/3 rule for integration.</p>
+        </div>
+        <div class="bisection-method">
+            <label for="">Enter the function</label>
+            <input type="text" class="check"> <br>
+            <label for="lower limit">Lower Limit</label>
+            <input type="text" class="lowerLim"><br>
+            <label for="upper limit">Upper Limit</label>
+            <input type="text" class="upperLim"> <br>
+            <label for="interval">Interval</label>
+            <input type="text" class="intrvl"> <br>
+            <label for="rootGenerate">For generating root: </label>
+            <button type="submit" class="btn--cls sub">Click here</button>
+
+            <div class="result">
+                <span class="validRange1">Result: </span><span class="eqnResult1"></span>
+            </div>
+            <button id="file--download1" class="btn--cls">File Download</button><br>
+            <label for="gtext">Graph:</label>
+        </div>
+    </div>
+    <div class="aadha">
+        <div id="graph">
+        </div>
+    </div>
+
+    <script src="js/simpson13-sim.js"></script>
+</body>
+
+</html>

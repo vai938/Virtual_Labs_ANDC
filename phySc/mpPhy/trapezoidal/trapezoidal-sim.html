@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapezoidal method</title>
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/trap-sim.css">
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="heading">
+        <div class="heading--1">
+            <h1>Trapezoidal method</h1>
+        </div>
+        <div class="heading--2">
+            <h1>For performing numerical integration </h1>
+        </div>
+    </div>
+    <div class="transe">
+        <div class="explanation">
+            <p class="desc">Let f(x) be a continuous function on the interval [a, b]. Now divide the intervals [a, b] into n equal subintervals with each of width, <br> <br>
+                Δx = (b-a)/n, Such that a = x0 < x1< x2< x3<…..< xn = b <br> <br> Then the Trapezoidal Rule formula for area approximating the definite integral <br> <br>
+                b∫a f(x)dx <br> is given by: <br>
+                b∫a f(x)dx &asymp;
+            <img src="images/trap-img2.png" alt="" class="chadar">
+        <br>
+        Where, xi = a+iΔx <br>If n →∞, R.H.S of the expression approaches the definite integral</p>
+        </div>
+        <div class="bisection-method">
+            <label for="">Enter the function</label>
+            <input type="text" class="check"> <br>
+            <label for="lower limit">Lower Limit</label>
+            <input type="text" class="lowerLim"><br>
+            <label for="upper limit">Upper Limit</label>
+            <input type="text" class="upperLim"> <br>
+            <label for="interval">Interval</label>
+            <input type="text" class="intrvl"> <br>
+            <label for="rootGenerate">For generating root: </label>
+            <button type="submit" class="btn--cls sub">Click here</button>
+
+            <div class="result">
+                <span class="validRange1">Result: </span><span class="eqnResult1"></span>
+            </div>
+            <button id="file--download1" class="btn--cls">File Download</button><br>
+            <label for="gtext">Graph:</label>
+        </div>
+    </div>
+    <div class="aadha">
+        <div id="graph">
+        </div>
+    </div>
+
+    <script src="js/trap-sim.js"></script>
+</body>
+
+</html>

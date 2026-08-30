@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Factorial of a number
+    </title>
+    <link rel="stylesheet" href="css/style-factorial-main.css" />
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>Factorial</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a onclick="openTab()" class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To find the Factorial of positive integer, design an effective algorithm.</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                    <h2 class="desc-heading">What is a Factorial?</h2>
+                    <p class="desc">In mathematics, factorial of a non-negative integer n is denoted by n!.
+                    </p>
+                    <p class="desc">As stated in wikipedia, In Indian mathematics, one of the earliest known descriptions of factorials comes
+                        from the Anuyogadvāra-sūtra, one of the canonical works of Jain literature, which has been
+                        assigned dates varying from 300 BCE to 400 CE. It separates out the sorted and reversed order of
+                        a set of items from the other ("mixed") orders, evaluating the number of mixed orders by
+                        subtracting two from the usual product formula for the factorial. The product rule for
+                        permutations was also described by 6th-century CE Jain monk Jinabhadra. Hindu scholars have been
+                        using factorial formulas since at least 1150, when Bhāskara II mentioned factorials in his work
+                        Līlāvatī, in connection with a problem of how many ways Vishnu could hold his four
+                        characteristic objects (a conch shell, discus, mace, and lotus flower) in his four hands, and a
+                        similar problem for a ten-handed god.</p>
+                    <p class="desc">A factorial of n items gives you the number of ways you can
+                        arrange the given items.
+                        For example: If there are two coins - you can arrange them in two different ways - like wise if
+                        you have 3 coins - there are 6 ways you can arrange them.</p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Algorithm</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Input an integer n.</li>
+                        <li>Start from a variable say fact=1 and i=1.
+                        </li>
+                        <li>Repeat until i&lt;=number./li>
+                            <ol>
+                                <li>fact=fact*i</li>
+                                <li>i=i+1</li>
+                            </ol>
+                        <li>Print the factorial</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                </div>
+                <pre>
+                        <code class="language-python line-numbers"> 
+                            def factorial(x):
+                                if x == 1:
+                                    return 1
+                                else:
+                                    return (x * factorial(x-1))
+                        num = int(input("Enter a number: "))
+                        result = factorial(num)
+                        print("The factorial of", num, "is", result)
+                        </code>
+                    </pre>
+
+            </div>
+            <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div><br><br>
+                <div id="sim-holder">
+                    <div class="input">
+                        <label for="input">Enter a positive number:</label>
+                        <input type="text" name="" id="input" value="" required autocomplete="off">
+                        <input type="submit" id="submit">
+                    </div><br>
+                    <p>The Factorial of the number is
+                    <p id="answer" style="font-size: 30px;">__________.</p><br><br>
+                    </p>
+                    <p>Let us consider, there are three distinct objects are we are asked to arrange them in a number of
+                        ways.....<button id="simul">Click Here</button> to see those arrangements. </p>
+                        <p id="para">There will be 6 methods to arrange them in
+                        the required order. Thus the factorial of 3 means, there are 6 methods to arrange 3 distinct
+                        objects. Hence, n! means there are this much ways to arrange n distinct objects.</p>
+                </div>
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Hence we can find the factorial of a number by repeated multiplication.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc">
+                    <ol>
+                        <li><a href="https://www.geeksforgeeks.org/program-for-factorial-of-a-number/" target="_blank"
+                                rel="noopener noreferrer">Geeks for Geeks</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Factorial" target="_blank"
+                                rel="noopener noreferrer">Wikipedia</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/fact-sim.js"></script>
+</body>
+
+</html>

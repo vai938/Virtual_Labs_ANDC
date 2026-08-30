@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modified Euler's method</title>
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/eulerM-sim.css">
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="heading">
+        <div class="heading--1">
+            <h1>Modified Euler's method</h1>
+        </div>
+        <div class="heading--2">
+            <h1>For solving ODE (Ordinary Differential Equation)</h1>
+        </div>
+    </div>
+    <div class="transe">
+        <div class="explanation">
+            <p class="desc">Instead of approximating f(x, y) by f(x0,y0)  as in Euler's method.  In  the  modified Euler's  method we have the iteration formula: <br>
+            <img src="images/img2.png" alt=""> <br>
+            Where y1 (n)  is the nth approximation to y1 .The iteration started with the Euler's  formula <br>
+            <img src="images/img3.png" alt=""> <br>
+            The predictor-corrector method is also known as Modified-Euler method. 
+In the Euler method, the tangent is drawn at a point and slope is calculated for a given step size. Thus this method works best with linear functions, but for other cases, there remains a truncation error. To solve this problem the Modified Euler method is introduced. In this method instead of a point, the arithmetic average of the slope over an interval is used.
+        </p>
+        </div>
+        <div class="bisection-method">
+            <label for="">Enter the function:</label>
+            <input type="text" class="check"> <br>
+            <label for="lower limit">Initial value of x:</label>
+            <input type="text" class="lowerLim"><br>
+            <label for="upper limit">Initial value of y:</label>
+            <input type="text" class="upperLim"> <br>
+            <label for="interval">Iterations:</label>
+            <input type="text" class="intrvl"> <br>
+            <label for="interval">Final value of x:</label>
+            <input type="text" class="ds"> <br>
+            <label for="rootGenerate">For solving ODE: </label>
+            <button class="btn--cls sub">Click here</button>
+
+            <div class="result">
+                <span class="validRange1">Result: </span><span class="eqnResult1"></span>
+            </div>
+            <button id="file--download1" class="btn--cls">File Download</button><br>
+            <label for="gtext">Graph:</label>
+        </div>
+    </div>
+    <div class="aadha">
+        <div id="graph">
+        </div>
+    </div>
+
+    <script src="js/eulerM-sim.js"></script>
+</body>
+
+</html>

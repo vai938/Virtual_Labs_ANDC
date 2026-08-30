@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Trapezoidal method
+    </title>
+    <link rel="stylesheet" href="css/trap-main.css" />
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1> Trapezoidal method for definite integral</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To Perform Numerical Integration using Trapezoidal Formula for a given data set /
+                        function</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                    <h2 class="desc-heading">What is Trapezoidal rule ?</h2>
+                    <p class="desc">In mathematics, the trapezoidal rule, also known as the trapezoid rule or trapezium
+                        rule is a technique for approximating the definite integral in numerical analysis. The
+                        trapezoidal rule is an integration rule used to calculate the area under a curve by dividing the
+                        curve into small trapezoids. The summation of all the areas of the small trapezoids will give
+                        the area under the curve. Let us understand the trapezoidal rule formula and its proof using
+                        examples in the upcoming sections. <br>
+                        The trapezoidal rule is applied to solve the definite integral of the form b∫a f(x) dx, by
+                        approximating the region under the graph of the function f(x) as a trapezoid and calculating its
+                        area. Under the trapezoidal rule, we evaluate the area under a curve is by dividing the total
+                        area into little trapezoids rather than rectangles.</p>
+                    <img src="images/trap-img1.png" class="sec-img1">
+                    <h2 class="desc">
+                        Derivation of Trapezoidal Rule Formula:</h2>
+                        <p class="desc">We can calculate the value of a definite integral by using trapezoids to divide the
+                            area under the curve for the given function.</p>
+                            <p class="desc">
+                                Let f(x) be a continuous function on the interval (a, b). Now divide the intervals (a, b) into n
+                        equal sub-intervals with each of width, <br><br>
+                        Δx = (b - a)/n, such that a = x0 < x1 < x2 < x3 <…..< xn=b <br><br>
+                        Then the Trapezoidal Rule formula for area approximating the definite integral b∫af(x)dx is
+                        given by:
+                        <br><br>
+                            b∫af(x) dx ≈ Tn = △x/2 [f(x0) + 2f(x1) + 2f(x2) +….2f(xn-1) + f(xn)] <br><br>
+                            where, xi = a + i△x <br><br>
+                            If n → ∞, R.H.S of the expression approaches the definite integral b∫a f(x)dx
+                        </p>
+                        <img src="images/WikiTrap.gif" class="sec-img3">
+                    <p class="desc">
+                        To prove the trapezoidal rule, consider a curve as shown in the figure above and divide the area
+                        under that curve into trapezoids. We see that the first trapezoid has a height Δx and parallel
+                        bases of length y0 or f(x0) and y1 or f1. Thus, the area of the first trapezoid in the above
+                        figure can be given as, <br><br>
+                        (1/2) Δx [f(x0) + f(x1)] <br><br>
+                        The areas of the remaining trapezoids are (1/2)Δx [f(x1) + f(x2)], (1/2)Δx [f(x2) + f(x3)], and
+                        so on. <br><br>
+                        Consequently, <br><br>
+                        ∫ba f(x) dx ≈ (1/2)Δx (f(x0)+f(x1) ) + (1/2)Δx (f(x1)+f(x2) ) + (1/2)Δx (f(x2)+f(x3) ) + … +
+                        (1/2)Δx (f(n-1) + f(xn) ) <br><br>
+                        After taking out a common factor of (1/2)Δx and combining like terms, we have, <br><br>
+                        ∫ba f(x) dx≈ (Δx/2) (f(x0)+2 f(x1)+2 f(x2)+2 f(x3)+ ... +2f(n-1) + f(xn) )
+                    </p>
+                </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Define function f(x)</li>
+                        <li>Enter initial limit (a), final limit (b), interval (i) </li>
+                        <li>Calculate step size (h)</li>
+                        <li>Using for loop calculate: <br> for i= 1:n-1 <br>
+                            k= a+ i*h <br>
+                            sum+=2*f(x)</li>
+                        <li>sum= f(a)+f(b)</li>
+                        <li>ans= h/2 * sum</li>
+                        <li>Display the answer</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                </div>
+                <pre>
+                        <code class="language-python line-numbers">
+                            a= float(input("Enter the lower limit: "))
+b= float(input("Enter the upper limit: "))
+n= int(input("Enter the length: "))
+
+def f(x):
+    return (1/(1+x**2))
+
+def trapezoidal(a,b,n):
+    h= (b-a)/n
+    sum1= f(a)+f(b)
+
+    for i in range(1,n):
+        w= a + i*h
+        sum1+= 2*f(w)
+
+    total= sum1 * h/2
+    return total
+
+result= trapezoidal(a,b,n)
+print("Result by Trapezoidal method is: ",result)
+
+                        </code>
+                    </pre>
+
+            </div>
+            <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div>
+                <a href="trapezoidal-sim.html" target=_blank>
+                    <div class="desc1">
+                        <p class="desc">Click here to perform simulation</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box" id="observation">
+                <div class="title">
+                    <h2 class="heading">Observations</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Take Observations from the method and tabulate it for the given intervals.
+                </div>
+                <div class="desc1">
+                    <p class="desc">Plot a graph also. (Interval vs Value).
+                </div>
+                <img src="images/img2.png" class="sec-img2" />
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Hence we calculate the definite integral <br> The summation of all the areas of the small trapezoids will give the area under the curve.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"><a href='https://byjus.com/maths/trapezoidal-rule/#:~:text=Trapezoidal%20Rule%20is%20a%20rule,and%20it%20calculates%20the%20area.'>Trapezoidal method Byju's</a></p>
+                    <p class="desc"><a
+                            href="https://en.wikipedia.org/wiki/Trapezoidal_rule">Trapezoidal method Wikipedia</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

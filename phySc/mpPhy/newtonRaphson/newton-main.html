@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Finding roots by Newton-Raphson-Method
+    </title>
+    <link rel="stylesheet" href="css/style-newton-main.css" />
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1> Newton-Raphson method for finding roots of equations</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a onclick="openTab()" class="internal_link" href="#code">
+                <img class="icon"
+                    src="data:image/png;base64,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"><br>
+                C++ Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">For finding the roots of linear, quadratic, third degree polynomial and
+                        transcendental equations from
+                        Newton-Raphson Method</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <h2 class="desc-heading">What is Newton-Raphson Method?</h2>
+                    <p class="desc">The Newton-Raphson method (also known as Newton's method) is a way to quickly find a
+                        good approximation for the root of a real-valued function f(x)=0. It uses the idea that a
+                        continuous and differentiable function can be approximated by a straight line tangent to it.</p>
+                    <h2 class="desc">How it works: </h2>
+                    <p class="desc">Suppose you need to find the root of a continuous, differentiable function f(x), and
+                        you know the root you are looking for is near the point x = x0. Then Newton's method tells us
+                        that a better approximation for the root is ----<br><br>
+                        <img src="images/nr.png" alt="Newton algo" width="200" height="100">
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Start the program. </li>
+                        <li>Enter the coefficients of the polynomial. </li>
+                        <li>Enter the iterations you want. </li>
+                        <li>Enter the guess</li>
+                        <li>x<sub>1</sub>= guess</li>
+                        <li>guess= x<sub>1</sub>- (f(x)/f'(x))</li>
+                        <li>Process will run until the desired iteration is reached.</li>
+                        <li>Terminate.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">C++ Code</h2>
+                </div>
+                <pre>
+                        <code class="language-cpp line-numbers">
+                            // newton raphson method
+#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+#include&lt;math.h&gt;
+#include&lt;stdlib.h&gt;
+#define    f(x)  x-tan(x)
+#define   g(x)  1-(1/cos(x)*(1/cos(x)))
+using namespace std;
+int main()
+{
+	 double x0, x1, f0, f1, g0, e;
+	 int step = 1, N;
+	 //precision set(upto 6)
+     //cout<< setprecision(6)<< fixed;
+     cout<< endl<<"**"<< endl;
+	 cout<<"Newton Raphson Method"<< endl;
+	 cout<<"**"<< endl; cout<<"the equation is like a=tan(a) , here for instance, the equation in f(x)=x-tan(x)"<<endl;
+	 cout<<"Enter your guess: ";
+	 cin>>x0;
+	 cout<<"Enter error : ";
+	 cin>>e;
+	 cout<<"Enter maximum loops : ";
+	 cin>>N;
+
+	 do
+	 {
+		  g0 = g(x0);
+		  f0 = f(x0);
+		  if(g0 == 0.0)
+		  {
+			   cout<<"Mathematical Error.";
+			   exit(0);
+		  }
+		  x1 = x0 - f0/g0;
+		  cout<<"Iteration-"<< step<<":\t x = "<< setw(15)<< x1<<" and f(x) = "<< setw(15)<< f(x1)<< endl;
+		  x0 = x1;
+		  step = step+1;
+		  if(step > N)
+		  {
+			   cout<<"Not Convergent.";
+			   exit(0);
+		  }
+		  f0 = f(x1);
+	 }while(fabs(f1)>=e);
+
+	 cout<< endl<<"The Root is: "<< x1;
+	 return 0;
+}
+
+}
+                        </code>
+                    </pre>
+
+            </div>
+            <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div>
+                <a href="newton-rapson.html" target=_blank>
+                    <div class="desc1">
+                        <p class="desc">To calculate value of roots from Newton-Raphson method.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box" id="observation">
+                <div class="title">
+                    <h2 class="heading">Observations</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Take Observations from the method and tabulate it for the given intervals.
+                </div>
+                <div class="desc1">
+                    <p class="desc">Plot a graph also. (function vs root).
+                </div>
+                <img src="images/newton-graph.png" class="obsv-image" />
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Hence we findout the roots for the given polynomial.</p>
+                </div>
+                <div class="desc1">
+                    <p class="desc">It is best method to solve the non-linear equations.
+                        It can also be used to solve the system of non-linear equations, non-linear differential and
+                        non-linear integral equations.
+                        The order of convergence is quadric i.e. of second order which makes this method fast as
+                        compared to other methods.
+                        It is very easy to implement on computer.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"><a href='https://en.wikipedia.org/wiki/Newton%27s_method'
+                            target="_blank">Newton-Raphson-Method on
+                            Wikipedia</a></p>
+                    <p class="desc"><a
+                            href="https://brilliant.org/wiki/newton-raphson-method/#:~:text=The%20Newton%2DRaphson%20method%20(also,straight%20line%20tangent%20to%20it."
+                            target="_blank">Newton-Raphson-Method on brilliant.org</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

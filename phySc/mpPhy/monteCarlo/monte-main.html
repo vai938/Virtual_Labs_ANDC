@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Monte-Carlo Estimation of Pi
+    </title>
+    <link rel="stylesheet" href="css/style_monte-main.css" />
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>Monte-Carlo Estimation of Pi</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="data:image/png;base64,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"><br>
+                C++ Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To calculate value of &#960 using Monte-Carlo simulations.</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                    <h2 class="desc-heading">What is Pi?</h2>
+                    <p class="desc">Pi is the famous circle number approximately given by 3.14159...</p>
+                    <p class="desc">It is the area of the unit circle (i.e. the circle with radius 1) or half the
+                        perimeter of the unit circle.</p>
+                    <h2 class="desc">What is a Monte-Carlo Simulation?</h2>
+                    <p class="desc">Monte-Carlo Simulations are experiments or computational algorithms that rely on
+                        sampling of random numbers. An experiment or a simulation of random numbers is repeated a large
+                        number of times to estimate something that may be determined deterministically as well (such as
+                        &#960;, as it is a deterministic number, i.e. it does not depend on randomness or chance).</p>
+                    <p class="desc">Monte-Carlo Simulations are used whenever calculating something in a deterministic
+                        fashion is too computationally expensive or not feasible anymore. Or when you&#39;re just too lazy
+                        to compute something exactly.
+                        And sometimes it is not even necessary to use Monte-Carlo Simulations and the only reason to use
+                        them is to show how beautiful Math and Probabilities can be.</p>
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Initialize circle_points, square_points and interval to 0. </li>
+                        <li>Generate random point x. </li>
+                        <li>Generate random point y.</li>
+                        <li>Calculate d = x*x + y*y.</li>
+                        <li>If d <= 1, increment circle_points.</li>
+                        <li>Increment square_points.</li>
+                        <li>Increment interval.</li>
+                        <li>Calculate pi = 4*(circle_points/square_points).</li>
+                        <li>If Interval <= NO_OF_ITERATIONS, repeat from 2.</li>
+                        <li>Terminate.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">C++ Code</h2>
+                </div>
+                <pre>
+                        <code class="language-cpp line-numbers">
+                                #include&ltiostream&gt
+                                #include&ltstdlib.h&gt
+                                #include&lttime.h&gt
+                                #include&ltiomanip&gt
+                                
+                                
+                                using namespace std;
+                                int main()
+                                {
+                                    cout.setf(ios::fixed);
+                                    cout&lt&lt"------------------------------------------------------------"&lt&ltendl;
+                                    cout&lt&lt"x"&lt&ltsetw(15)&lt&lt"y"&lt&ltsetw(14)&lt&lt"circle_pt"&lt&ltsetw(12)&lt&lt"square_pt"&lt&ltsetw(10)&lt&lt"pi"&lt&ltendl;
+                                    cout&lt&lt"------------------------------------------------------------"&lt&ltendl;
+                                    int i, intrval=1000;
+                                    int cr_pt=0, sq_pt=0;
+                                    double x,y,pi,r;
+                                    srand(time(NULL));
+                                    for (i=0; (i&ltintrval); i++)
+                                    {
+                                        x=double((1+rand()%intrval))/intrval;
+                                        y=double((1+rand()%intrval))/intrval;
+                                        r= x*x + y*y;
+                                        if (r&lt=1)
+                                            cr_pt++;
+                                        sq_pt++;
+                                        
+                                        pi=double(4*cr_pt)/sq_pt;
+                                        cout&lt&ltx&lt&ltsetw(10)&lt&lty&lt&ltsetw(10)&lt&ltcr_pt&lt&ltsetw(10)&lt&ltsq_pt&lt&ltsetw(15)&lt&ltpi&lt&ltendl;
+                                    } 
+                                    return 0;
+                                }
+                        </code></pre>
+            </div>
+            <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div>
+                <a href="monte-sim.html">
+                    <div class="desc1">
+                        <p class="desc">To calculate value of &#960 using Monte-Carlo simulations.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box" id="observation">
+                <div class="title">
+                    <h2 class="heading">Observations</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Take Observations from simulator and tabulate it for &#960 and Interval.
+                </div>
+                <div class="desc1">
+                    <p class="desc">Plot a graph also. (&#960 vs Interval).
+                </div>
+                <img class="obsv-image" src="images/newplot.png"/>
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result</h2>
+                </div>
+                    <p class="desc">The value of &#960; is &nbsp; ----> &nbsp; 3.14159265359</p>
+                    <p class="desc">But, we take &#960; approximately equal to 3.14.</p>
+                    <p class="desc">Any result coming in range 3.13 to 3.15 may be considered as successful simulation
+                        of the method. </p>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"><a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte_Carlo_method-on
+                            Wikipedia</a></p>
+                    <p class="desc"><a href="https://brilliant.org/wiki/monte-carlo/">Monte_Carlo_method-on
+                            Brilliant.org</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

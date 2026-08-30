@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating root using NR Method</title>
+    <link rel="shortcut icon" href="../../../images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style_newton-sim.css">
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="heading">
+        <div class="heading--1">
+            <h1>Newton-Rapson-Method</h1>
+        </div>
+        <select name="eqation-type" id="select-eqn">
+            <option value="select">Select</option>
+            <option value="Algebraic-equation" class="alg-eqn">Algebraic equation</option>
+            <option value="Transcendental-equation" class="trsn-eqn">Transcendental equation</option>
+        </select>
+        <div class="heading--2 algebraic--equation1">
+            <h1> For finding the roots of linear, quadratic and third degree polynomial.
+        </div>
+        </h1>
+        <div class="heading--2 transedental--equation1">
+            <h1> For finding the roots of transcendental equation.
+            </h1>
+        </div>
+    </div>
+    <div class="algebraic--equation2">
+        <div class="explanation">
+            Given a function f(x) on floating number x and an initial guess for root, find root of function in interval.
+            Here f(x) represents algebraic or transcendental equation.
+            For simplicity, derivative of function is also provided.
+            <b> Example:</b> <br>
+            <div class="example">
+                <b>Input:</b> <br> A function of x (for example x<sup>3</sup> +4x<sup>2</sup> + 8.), <br>
+                derivative function of x (3x<sup>2</sup> +8x)
+                and an initial guess x<sub>0</sub> = -1 <br>
+                <b>Output:</b> <br> The value of root is : -4.412
+                or any other value close to root.
+            </div>
+        </div>
+        <form class="newton-method">
+            <p class="equation-detail">f(x)= a x<sup>3</sup> +b x<sup>2</sup>+c x<sup>1</sup> + d :</p>
+            <p class="equation-detail">Enter the coefficients of the equation:</p>
+            <input type="text" placeholder="a" class="cube--equation cube-coefficient">x<sup>3</sup>+
+            <input type="text" placeholder="b" class="cube--equation square-coefficient">x<sup>2</sup>+
+            <input type="text" placeholder="c" class="cube--equation linear-coefficient">x<sup>1</sup>+
+            <input type="text" placeholder="d" class="cube--equation coefficient"><br>
+            <label for="iterations">Enter the number of iterations: </label>
+            <input type="text" placeholder="i" class="cube--equation iterations"><br>
+            <label for="intervals">Enter the initial guess: </label>x<sub>0</sub> =
+            <input type="text" placeholder="x" class="cube--equation interval--A"> <br>
+            <label for="rootGenerate">For generating root: </label>
+            <button class="btn--cls root--finder">Click here</button>
+
+            <div class="result">
+                <span class="validRange">Result: </span><span class="eqnResult"></span>
+            </div>
+            <button id="file--download" class="btn--cls">File Download</button><br>
+            <label for="gtext">Graph:</label>
+        </form>
+        <div id="graph">
+        </div>
+    </div>
+    <div class="transedental--equation2">
+        <div class="explanation">
+            Given a function f(x) on floating number x and an initial guess for root, find root of function in interval.
+            Here f(x) represents transcendental equation.
+            For simplicity, derivative of function is also provided.
+            <b> Example:</b> <br>
+            <div class="example">
+                <b>Input:</b> <br> A function of x (for example= x<sup>2</sup> -2sinx), <br>
+                derivative function of x = 2(x-cosx)
+                and an initial guess x<sub>0</sub> = 2 <br>
+                <b>Output:</b> <br> The value of root is : 1.405
+                or any other value close to root.
+            </div> <br>
+            In optics, the <b>Fraunhofer diffraction</b> equation is used to model the diffraction of waves when the
+            diffraction pattern is viewed at a long distance from the diffracting object (in the far-field region), and
+            also when it is viewed at the focal plane of an imaging lens. In contrast, the diffraction pattern created
+            near the object (in the near field region) is given by the Fresnel diffraction equation. <br>
+            <img src="images/fraunDiff.png" alt="Fraunhofer-diffraction" width="600" height="300" class="fraunImg">
+            <img src="images/singleSlit.gif" alt="Fraunhofer-diffraction" width="500" height="200" class="fraunImg">
+            <br>
+            By using the intensity equation I/I<sub>0</sub>= (sinx/x)<sup>2</sup>,maxima or minima is calculated
+            accordingly. Here the value of x is founded by solving the equation (x-tanx) and finding its different
+            roots.
+        </div>
+
+        <form class="newton-method-tran">
+            <p class="equation-detail">f(x)= x-tanx</p>
+            <label for="intervals">Enter the initial guess: </label>x<sub>0</sub> =
+            <input type="text" placeholder="x" class="cube--equation interval--trans"> <br>
+            <label for="iterations">Enter the number of iterations: </label>
+            <input type="text" placeholder="i" class="cube--equation iterationsTrans"> <br>
+            <label for="rootGenerate">For generating root: </label>
+            <button class="btn--cls root--finder-tran">Click here</button>
+
+            <div class="result">
+                <span class="validRange">Result: Root of the eqation is </span><span class="eqnResultTran"></span>
+            </div>
+            **Enter the value of roots in ascending order.
+            <table>
+                <tr>
+                    <th>Value of Root</th>
+                    <th>Value of intensity I/I<sub>0</sub></th>
+                </tr>
+                <tr>
+                    <th><input type="root1" class="cube--equationTr root1"></th>
+                    <th class="inten1"></th>
+                </tr>
+                <tr>
+                    <th><input type="root2" class="cube--equationTr root2"></th>
+                    <th class="inten2"></th>
+                </tr>
+                <tr>
+                    <th><input type="root3" class="cube--equationTr root3"></th>
+                    <th class="inten3"></th>
+                </tr>
+                <tr>
+                    <th><input type="root4" class="cube--equationTr root4"></th>
+                    <th class="inten4"></th>
+                </tr>
+            </table>
+            <button class="graph--tran btn--cls">Check graph</button>
+            <button id="file--download--tran" class="btn--cls">File Download</button><br>
+            <label for="gtext">Graph:</label>
+            <div id="graph--1">
+            </div>
+        </form>
+    </div>
+
+    <script src="js/newton-rap-sim.js"></script>
+</body>
+
+</html>
