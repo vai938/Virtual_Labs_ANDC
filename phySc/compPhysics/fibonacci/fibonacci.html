@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Fibonacci series
+    </title>
+    <link rel="stylesheet" href="css/fibonacci.css?v=1" />
+    <link rel="shortcut icon" href="/images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>To generate a Fibonacci series</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#practice">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Practice</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#quiz">
+                <img class="icon"
+                    src="https://img.favpng.com/21/11/8/new-york-city-fotolia-stock-photography-sales-png-favpng-f9ZiUMqBcZK0LNfZPfC674ZxZ_t.jpg"><br>
+                Quiz</a>
+        </div>
+        <!-- <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div> -->
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To generate a Fibonacci series till a given iteration</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                        In mathematics, the Fibonacci numbers, commonly denoted Fn, form a sequence, the Fibonacci sequence, in which each number is the sum of the two preceding ones. The sequence commonly starts from 0 and 1, although some authors omit the initial terms and start the sequence from 1 and 1 or from 1 and 2. Starting from 0 and 1, the next few values in the sequence are <br> <br>
+                        0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ... <br> <br>
+                        We find applications of the Fibonacci series around us in our day-to-day lives. It is also found in biological settings, like in the branching of trees, patterns of petals in flowers, etc. Let us understand the Fibonacci series formula, properties, and its applications in the following sections.
+
+                        <br> <br>
+                        The Fibonacci series is the sequence of numbers (also called Fibonacci numbers), where every number is the sum of the preceding two numbers, such that the first two terms are '0' and '1'. In some older versions of the series, the term '0' might be omitted. A Fibonacci series can thus be given as, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... It can be thus be observed that every term can be calculated by adding the two terms before it.
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <p class="desc">The Fibonacci series formula in maths can be used to find the missing terms in a Fibonacci series. The formula to find the (n+1)th term in the sequence is defined using the recursive formula, such that F0 = 0, F1 = 1 to give Fn. <br><br>
+                            The Fibonacci formula is given as follows. <br>
+                            Fn = Fn-1 + Fn-2, where n > 1
+                            <ol class="desc" type="i">
+                                <li>F0= 0, F1=1</li>
+                                <li>Fn= Fn-1 + Fn-2</li>
+                                <li>for n>1
+                                </li>
+                                <li>Fibonacci series: 0,1,1,2,3,5,8,13,...
+                                </li>
+                            </ol></p>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="practice">
+                <div class="title">
+                    <h2 class="heading">Practice</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Enter the number till which you want the Fibonacci series: <br>
+                        <input type="text" class="inp"></p>
+                    <button class="submit">Click here</button>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Here's the result</p>
+                    <p class="desc answer"></p>
+                    <br><br><br>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                    <pre>
+                        <code class="language-python line-numbers">
+                            # Program to display the Fibonacci sequence up to n-th term
+
+nterms = int(input("How many terms? "))
+
+# first two terms
+n1, n2 = 0, 1
+count = 0
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Please enter a positive integer")
+# if there is only one term, return n1
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+# generate fibonacci sequence
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
+
+                        </code>
+                    </pre>
+                </div>
+            </div>
+                <!-- <div class="box" id="quiz">
+                <div class="title">
+                    <h2 class="heading">Quiz</h2>
+                </div>
+            </div> -->
+                <div class="box" id="result">
+                    <div class="title">
+                        <h2 class="heading">Result</h2>
+                    </div>
+                    <div class="desc1">
+                        <p class="desc">Hence we can find Fibonacci series till nth iteration.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title" id="references">
+                        <h2 class="heading">References</h2>
+                    </div>
+                    <div class="desc1">
+                        <p class="desc"><a href="https://www.javatpoint.com/fibonacci-series-in-java">javatpoint (Fibonacci series)</a></p>
+                        <p class="desc"><a href="https://en.wikipedia.org/wiki/Fibonacci_number">Wikipedia (Fibonacci series)</a></p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="js/fibonacci.js?v=1"></script>
+</body>
+
+</html>

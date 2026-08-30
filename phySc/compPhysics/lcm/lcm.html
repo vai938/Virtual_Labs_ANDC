@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        LCM (Least Common Multiple)
+    </title>
+    <link rel="stylesheet" href="css/lcm.css?v=1" />
+    <link rel="shortcut icon" href="/images/vlab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>To calculate the LCM of two given numbers</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#practice">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Practice</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#code">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png"><br>
+                Python Code</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#quiz">
+                <img class="icon"
+                    src="https://img.favpng.com/21/11/8/new-york-city-fotolia-stock-photography-sales-png-favpng-f9ZiUMqBcZK0LNfZPfC674ZxZ_t.jpg"><br>
+                Quiz</a>
+        </div>
+        <!-- <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div> -->
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To calculate the LCM of two given numbers</p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                        The abbreviation LCM stands for "Least Common Multiple". The least common multiple of two numbers is the lowest possible number that can be divisible by both numbers. It can be calculated for two or more integers as well as two or more fractions. <br> <br> There are multiple methods to find the LCM of two numbers. One of the quickest ways to find the LCM of two numbers is to use the prime factorization of each number and then the product of the highest powers of the common prime factors will be the LCM of those numbers.
+                        <br>  <br>
+                        The least common multiple is also known as LCM (or) the lowest common multiple in math. The least common multiple of two or more numbers is the smallest number among all common multiples of the given numbers. Let's take two numbers: say, 2 and 5. Each will have its own set of multiples. <br>
+                        <ul class="desc">
+                            <li>Multiples of 2 are 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, …</li>
+                            <li>Multiples of 5 are 5, 10, 15, 20, …</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <p class="desc">By using the listing out the common multiples method we can find out the common multiples of two or more numbers. Out of these common multiples, the least common multiple is considered and the LCM of two given numbers can thus be calculated. To calculate the LCM of the two numbers A and B by the listing method, follow the steps given below:</li>
+                        <ol class="desc" type="i">
+                            <li>List the first few multiples of number A and B.</li>
+                            <li>Mark the common multiples from the multiples of both numbers.</li>
+                            <li>Select the smallest common multiple. That lowest common multiple is the LCM of the two numbers.
+                            </li>
+                        </ol>
+                  </ol>
+                </div>
+            </div>
+            <div class="box" id="practice">
+                <div class="title">
+                    <h2 class="heading">Practice</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Enter the first number(A): <br><input type="text" class="inpt inp1"></p>
+                    <p class="desc">Enter the second number(B): <br><input type="text" class="inpt inp2"></p>
+                    <button class="submt">Click here</button>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Here's the result</p>
+                    <p class="desc answer"></p>
+                    <br><br><br>
+                </div>
+            </div>
+            <div class="box" id="code">
+                <div class="title">
+                    <h2 class="heading">Python Code</h2>
+                    <pre>
+                        <code class="language-python line-numbers">
+                            # Python Program to find the L.C.M. of two input number
+                            def compute_lcm(x, y):
+                            
+                               # choose the greater number
+                               if x > y:
+                                   greater = x
+                               else:
+                                   greater = y
+                            
+                               while(True):
+                                   if((greater % x == 0) and (greater % y == 0)):
+                                       lcm = greater
+                                       break
+                                   greater += 1
+                            
+                               return lcm
+                            
+                            num1 = 54
+                            num2 = 24
+                            print("The L.C.M. is", compute_lcm(num1, num2))
+                        </code>
+                    </pre>
+                </div>
+            </div>
+                <!-- <div class="box" id="quiz">
+                <div class="title">
+                    <h2 class="heading">Quiz</h2>
+                </div>
+            </div> -->
+                <div class="box" id="result">
+                    <div class="title">
+                        <h2 class="heading">Result</h2>
+                    </div>
+                    <div class="desc1">
+                        <p class="desc">Hence we can findout the LCM of two given numbers.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title" id="references">
+                        <h2 class="heading">References</h2>
+                    </div>
+                    <div class="desc1">
+                        <p class="desc"><a href="https://www.cuemath.com/numbers/lcm-least-common-multiple/">LCM (cuemath)</a> <br><a href="https://en.wikipedia.org/wiki/Least_common_multiple">Wikipedia (LCM)</a></p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="js/lcm.js?v=1"></script>
+</body>
+
+</html>
