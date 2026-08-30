@@ -1,0 +1,694 @@
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("digital-7.regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+header {
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(0, 52, 65);
+  text-align: center;
+}
+
+header .logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+header>h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+header .navigation li {
+  font-size: 20px;
+  list-style: none;
+  margin-left: 20px;
+  padding: 13px 20px;
+}
+
+header .navigation li:hover {
+  background: rgba(0, 139, 139, 0.74);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+header .navigation li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 3px;
+}
+
+nav {
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 600px;
+  height: auto;
+  background: rgb(0, 30, 37);
+  margin: 0% 50px 20px;
+  float: right;
+  justify-content: space-around;
+  font-weight: bold;
+  color: honeydew;
+  display: grid;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.bbbt {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+nav .boxq {
+  transition: 0.4s ease;
+  height: 100px;
+  width: 115px;
+  text-align: center;
+  margin: 1rem;
+  border: 2px solid rgb(236, 236, 236);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+nav .boxq:hover {
+  background: rgba(0, 255, 255, 0.589);
+  color: white;
+}
+
+nav .boxq a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: white;
+}
+
+nav .boxq a img {
+  margin-bottom: 2px;
+}
+
+.ins {
+  font-size: 1.5rem;
+  position: relative;
+  width: 100%;
+  top: 15px;
+  left: 40px;
+  margin-bottom: 40px;
+  z-index: 100;
+  font-weight: bold;
+}
+
+.icon {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.sim--head {
+  border: 2px solid rgb(0, 52, 65);
+  background: rgb(0, 52, 65);
+  width: 40%;
+  height: 60px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+  margin-left: 5%;
+}
+
+.head--det {
+  font-size: 1.6rem;
+  color: white;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.sim--head-full {
+  border: 2px solid rgb(0, 52, 65);
+  background: rgb(0, 52, 65);
+  font-size: 1.8rem;
+  color: white;
+  padding: 20px 20px;
+}
+
+.full-sc {
+  width: 80px;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+}
+
+.full-sc-click {
+  width: 80px;
+  height: 45px;
+  position: absolute;
+  top: 3.8%;
+  right: 25px;
+  cursor: pointer;
+}
+
+.re-tit-sim {
+  width: 550px;
+  height: 400px;
+  margin-top: 20px;
+  margin-left: 60px;
+  box-shadow: 3px 3px 5px 2px rgba(200, 200, 200, 0.4),
+    -2px -2px 5px 2px rgba(200, 200, 200, 0.4);
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.re-tit-sim-full {
+  width: 800px;
+  height: 600px;
+  margin-top: 50px;
+  margin-left: 60px;
+  margin-bottom: 30px;
+  background: rgb(235, 147, 147);
+  box-shadow: 3px 3px 5px 2px rgba(200, 200, 200, 0.4),
+    -2px -2px 5px 2px rgba(200, 200, 200, 0.4);
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#values-rpm {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btnOk {
+  font-size: 1.2rem;
+  border-radius: 20%;
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  padding: 6px 10px;
+  border: 2px solid black;
+}
+
+.error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 1.2rem;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(0 65 65);
+  padding: 20px 30px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 20000;
+  transition: all 0.5s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  transition: all 0.5s;
+}
+
+.fullScreenSetup {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  background: rgba(0, 0, 0, 0.52);
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  opacity: 0.8;
+}
+
+.container {
+  position: absolute;
+  right: 4%;
+  top: 24%;
+  width: 20%;
+}
+#select-eqn{
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  background: rgb(136, 227, 235);
+  color: black;
+  border-radius: 8px;
+  border: 2px solid black;
+  margin: 1%;
+}
+
+.ammeter {
+  position: absolute;
+  margin-top: -400px;
+  margin-left: 300px;
+  height: 120px;
+  width: 120px;
+}
+.ammeterMicro {
+  position: absolute;
+  margin-top: -400px;
+  margin-left: 300px;
+  height: 120px;
+  width: 120px;
+}
+
+.voltmeterJada {
+  position: absolute;
+  margin-top: -400px;
+  height: 120px;
+  width: 120px;
+  margin-left: 500px;
+}
+
+.voltmeter {
+  position: absolute;
+  margin-top: -400px;
+  height: 120px;
+  width: 120px;
+  margin-left: 500px;
+}
+
+.powerSupply {
+  position: absolute;
+  margin-top: -300px;
+  margin-left: 500px;
+  height: 200px;
+  width: 270px;
+}
+
+.diode {
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 250px;
+  height: 20px;
+  width: 80px;
+  z-index: 1000;
+}
+
+.resistor {
+  position: absolute;
+  margin-top: -210px;
+  margin-left: 400px;
+  height: 40px;
+  width: 80px;
+  z-index: 100;
+}
+.powr {
+  font-size: 1.1rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -185px;
+  margin-left: 700px;
+  z-index: 1000;
+  font-family: "digital-clock-font";
+}
+.powerText {
+  font-size: 1.1rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -185px;
+  margin-left: 670px;
+  z-index: 1000;
+  font-family: "digital-clock-font";
+}
+
+.dono {
+  font-size: 1.2rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -390px;
+  margin-left: 320px;
+  z-index: 1000;
+  font-family: "digital-clock-font";
+}
+.donoVolt {
+  font-size: 1.2rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -385px;
+  margin-left: 530px;
+  z-index: 1000;
+  font-family: "digital-clock-font";
+}
+
+.donoMicro {
+  font-size: 1.2rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -391px;
+  margin-left: 320px;
+  z-index: 1000;
+  font-family: "digital-clock-font";
+}
+.donoVoltJada {
+  font-size: 1.2rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -385px;
+  margin-left: 530px;
+  z-index: 1000;
+  font-family: "digital-clock-font";
+}
+
+.btn-nor {
+  transition: transform 0.4s ease-in;
+}
+
+.btn-green {
+  fill: green;
+  transform: translateX(22px);
+  transition: transform 0.4s ease-in;
+}
+.redPowerAmp{
+  z-index: 1000;
+}
+
+.wire1 {
+  position: absolute;
+  margin-top: -205px;
+  transform: rotate(12deg);
+  width: 350px;
+  margin-left: 250px;
+  z-index: 1;
+}
+
+.wire2 {
+  position: absolute;
+  margin-top: -280px;
+  transform: rotate(-14deg);
+  width: 420px;
+  margin-left: 210px;
+  z-index: 100000;
+}
+
+.wire3 {
+  position: absolute;
+  margin-top: -340px;
+  width: 175px;
+  height: 90px;
+  margin-left: 370px;
+  transform: rotate(-1deg);
+}
+
+.wire4 {
+  position: absolute;
+  margin-top: -272px;
+  width: 330px;
+  margin-left: 315px;
+  z-index: 100;
+  transform: rotate(37deg);
+}
+
+.wire8{
+  position: absolute;
+  margin-top: -270px;
+  width: 260px;
+  height: 90px;
+  margin-left: 320px;
+  z-index: 100;
+  transform: rotate(-30deg);
+}
+
+.wire11 {
+  position: absolute;
+  margin-top: -272px;
+  transform: rotate(42deg);
+  width: 280px;
+  margin-left: 340px;
+  z-index: 1;
+}
+
+.wire12 {
+  position: absolute;
+  margin-top: -280px;
+  transform: rotate(-15deg);
+  width: 320px;
+  margin-left: 240px;
+  z-index: 10000;
+}
+.redPowerVoltJada{
+  z-index: 1000000000;
+}
+
+.wire13 {
+  position: absolute;
+  margin-top: -330px;
+  width: 240px;
+  height: 90px;
+  margin-left: 340px;
+  transform: rotate(-1deg);
+}
+
+.wire14 {
+  position: absolute;
+  margin-top: -272px;
+  width: 180px;
+  margin-left: 490px;
+  /* z-index: 1; */
+  transform: rotate(70deg);
+}
+
+.wire18{
+  position: absolute;
+  margin-top: -298px;
+  width: 140px;
+  height: 90px;
+  margin-left: 280px;
+  z-index: 100;
+  transform: rotate(-85deg);
+}
+
+.blackPowerVolt{
+  z-index: 100000;
+}
+
+.container-background {
+  position: absolute;
+  right: 2%;
+  top: 20%;
+  width: 25%;
+  border: 2px solid rgba(31, 205, 228, 0.207);
+  border-radius: 20px;
+  background: rgba(31, 205, 228, 0.207);
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%), 0 0px 20px 0 rgb(0 0 0 / 19%);
+  height: 80vh;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: rgb(0, 116, 116);
+  width: 8%;
+  border-radius: 60px;
+  height: 20px;
+}
+
+.rpm-val,
+.instruct {
+  font-size: 1.6rem;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: block;
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+  font-size: 1.3rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgb(212, 212, 212);
+}
+
+
+.slider:hover {
+  opacity: 1;
+}
+
+.instruct-info {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    margin: 24px 20px;
+  }
+
+  header {
+    height: 10vh;
+    width: 100%;
+    background: rgb(0, 52, 65);
+  }
+
+  header .logo {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  header div {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    justify-content: center;
+    /* gap: 1rem; */
+  }
+
+  header div h1 {
+    font-size: 1rem;
+    color: white;
+    /* width: 100%; */
+    margin-top: 10px;
+  }
+
+  header .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .navigation li {
+    font-size: 12px;
+    list-style: none;
+    margin-left: 20px;
+    padding: 8px 1px;
+  }
+
+  header .navigation li:hover {
+    background: rgba(0, 139, 139, 0.74);
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  header .navigation li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 3px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .head--det {
+    font-size: 1.3rem;
+  }
+
+  .full-sc {
+    width: 20px;
+    height: 20px;
+  }
+
+  .e-coli-sim {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+
+  header div {
+    width: 45%;
+  }
+
+  header div h1 {
+    font-size: 0.8rem;
+  }
+
+  header .navigation li {
+    font-size: 0.6rem;
+  }
+
+  .head--det {
+    font-size: 1rem;
+  }
+
+  .sim--head {
+    display: flex;
+    width: auto;
+  }
+
+  .full-sc {
+    width: 25px;
+    height: 45px;
+    position: relative;
+    top: 5%;
+    left: 1%;
+    cursor: pointer;
+  }
+
+  .e-coli-sim {
+    width: 250px;
+    height: 270px;
+    margin-left: 60px;
+  }
+
+  nav {
+    margin-left: -110px;
+    float: none;
+    margin-left: 50px;
+  }
+}

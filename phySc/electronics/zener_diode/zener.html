@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/vlab-logo.png" type="image/x-icon">
+    <title>
+        Zener Diode
+    </title>
+    <link rel="stylesheet" href="css/zener.css?v=1" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="/images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#labs_section">Labs</a></li>
+            <li><a href="/index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>To draw the V-I characteristic of Zener diode hence determine Zener breakdown voltage.</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#animation">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Animation</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#precaution">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2698/2698937.png"><br>
+                Precaution</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"> To draw the V-I characteristic of Zener diode and to determine Zener breakdown voltage. </p>
+                </div>
+            </div>
+
+            <div class="box" id="apparatus">
+                <h1 class="heading">Apparatus</h1>
+                <ol class="desc">
+                    <li>Zener diode</li>
+                    <li>Variable power supply (10 volts)</li>
+                    <li>A milliammeter (0-20 mA)</li>
+                    <li>Microammeter</li>
+                    <li>A voltmeter (0-2 volt)</li>
+                    <li>Voltmeter (0-30 volt)</li>
+                    <li>Connecting wires</li>
+                </ol>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Principle</h1>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                        Zener diode is a heavily doped PN junction diode. Due to heavily doped, its
+depletion layer is very thin and is order of micrometer. The forward bias characteristic of Zener
+diode is same as the normal PN junction diode but in reverse bias it has different characteristic. <br>
+Initially, a negligible constant current flow through the zener diode in its reverse bias but at
+certain voltage, the current becomes abruptly large. This voltage is called as zener voltage. This
+sudden and sharp increase in zener current is called as zener breakdown.  <br> <br>
+         
+           <img src="images/img1.png" width="30%" height="30%"><br>
+           <img src="images/img2.png" width="30%" height="10%"><br> <br>
+
+           The zener diode with breakdown voltage Vz is revverse biased and is connected in parallel with the load resistance RL across which a constant output voltage is desired. <br>
+
+           For an input voltage Vi greater than the zener diode's voltage Vz, the zener diode will maintain a constant output voltage Vo= Vz across the load resistance RL.
+           When the input voltage is increased slowly, a very small current flows through the zener diode. It offers a very high resistance to the current and the whole of input appears across the output terminals. Consequently in this range, the output terminals. Consequently in this range, the output voltage increases linearly with the input voltage. Once the input voltage is greater than Vz, zener diode offers a very small resistance to the current. Consequently a large current flows in the circuit and the voltage drop across the series resistance Rs will increase maintaining the voltage drop across RL at constant Vo= Vz.
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Connect the circuit as shown in the figure.</li>
+                        <li>Choose a series resistance Rs of value 100ohm and a load resistance RL of about 1000ohm</li>
+                        <li>Increase the input voltage Vi in small steps and note down the corresponding output Vo.</li>
+                        <li>Take readings till Vi is well above Vz and Vo remains constant.</li>
+                        <li>Plot a graph between Vi taken along X-axis and Vo taken along Y-axis</li>
+                        <li>FOr styding the effect of load resistance keep Vi>Vz</li>
+                        <li>Keep Rs same as before and increase RL in small steps starting from a value of about 50 ohm. Note down the corresponding output voltage.</li>
+                        <li>Plot a graph between load resistance RL taken along X-axis and the output voltage Vo along Y-axis.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="animation">
+                <div class="title">
+                    <h2 class="heading">Animation</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Animation of the experiment:--</p>
+                </div>
+                <!-- <video id="my-video" class="video-js" controls width="600" poster="images/poster-dna.jpg"
+                    data-setup="{}">
+                    <source src="anime/dna-extract.mp4" type="video/mp4" />
+                </video> -->
+            </div>
+            <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div>
+                <a href="zener-sim.html">
+                    <div class="desc1">
+                        <p class="desc">Click here to perform the simulation</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box" id="observation">
+                <div class="title">
+                    <h2 class="heading">Observation and calculation</h2>
+                </div> <br>
+                <div class="desc1">
+                    <ol class="desc"> 
+                        <li>Least count of voltmeter (0-2 volt) = 0.02 volt </li>
+                        <li>Least count of voltmeter (0-30 volt) = 0.5 volt</li>
+                        <li>Least count of milliammeter = 0.2 mA</li>
+                        <li>Least count of micrometer = 5 uA</li>
+                        <li>VF and IF for PN junction diode in forward bias <br> <br>
+                            <table border="2" class="tbl">
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>VF (volts)</th>
+                                    <th>IF (mA)</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table></li>
+                        <li>VR and IR for PN junction diode in reverse bias <br> <br>
+                            <table border="2" class="tbl">
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>VR (volts)</th>
+                                    <th>IR (uA)</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result & Discussion</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">
+                        The V-I characteristic of Zener diode indicates that characteristic of Zener diode in forward
+                        bias is same as PN junction diode. In reverse bias, a negligible constant current flow through
+                        the zener diode but the current becomes abruptly large at certain voltage. This voltage is
+                        called as zener voltage. This sudden and sharp increase in zener current is called as zener
+                        breakdown. Vknee=0.7 volt and VZ= 9 volt. 
+                    </p>
+                </div>
+
+            </div>
+            <div class="box">
+                <div class="title" id="precaution">
+                    <h2 class="heading">Precaution</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li> The connection should be tight otherwise fluctuation in voltage and current will happen.</li>
+                        <li>At the turning point of curve, more reading should be taken.</li>
+                        <li>For the plot of Graph, current should be taken mA for both forward and reverse biased diode. </li>
+                        <li> The reading should be in multiple of least count.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li><a href="https://www.electrical4u.com/zener-diode-experiment/#:~:text=Once%20the%20reverse%20voltage%20reaches,diode%20is%20called%20its%20characteristic.">Zener Diode (electrical4u)</a></li>
+                        <li><a href="http://vlabs.iitkgp.ernet.in/be/exp10/index.html">Vlab iitkgp</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- VideoJS to beautify video player -->
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+</body>
+
+</html>

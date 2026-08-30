@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../..../../../images/vlab-logo.png" type="image/x-icon">
+    <title>
+       First order low-pass filter 
+    </title>
+    <link rel="stylesheet" href="low_pass.css" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="../../../images/logo.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1> First Order Low-Pass Filter Using Operation-Amplifier.</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#animation">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Animation</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#precaution">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2698/2698937.png"><br>
+                Precaution</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc"> Desiging of a first order low-pass filter using op-amp (IC 741) .</p>
+                </div>
+            </div>
+            <div class="box" id="apparatus">
+                <div class="title">
+                    <h2 class="heading">Apparatus</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Breadboard</li>
+                        <li> Resistance(1/4 watt)</li>
+                        <li>Ceramic capacitor</li>
+                        <li>3 CRO Probes</li>
+                        <li>CRO (Cathods Ray Oscilloscope).</li>
+                        <li>Function Generator and Constant Power Supply</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                
+                            
+                            <p class="desc">
+                                <img src="images/figure1.png" width="400" alt="">
+                            <div class="desc1">
+                            <ol class="desc">
+                                <li>In figure1.represent the Circuit diagram of first-order Butterworth low-pass filter   </li>
+                                <li>In a low-pass filter,frequencies greater than a cut-off frequency f<sub>0</sub>are block</li>
+                                <li>figure1 represent the-investing ampilfies.Configuration,with anRC Circuit present at the non- investing input for
+                                    filtering of the signal with the high-frequency. </li>
+                                <li>the cut-off frequrncy f<sub>c</sub>of the above Circuit can be determined by the Value of Rand C i.e,<br>
+                                    f<sub>c</sub>=1/2pie RC</li>
+                                <li>Gain of a first order low pass filter is given by the expression below:</li>
+                            <img src="images/voltagegain.png" width="400" alt=""> 
+                            <h1 class="desc-heading"></h1>
+                            <p class="desc">
+                                    Where
+                                 <br>AF = the pass band gain of the filter, AF = (1 + RF / R1)<br>
+                                 ƒ = the frequency of the input signal in Hertz, (Hz)<br>
+                                 ƒc = the cut-off frequency in Hertz, (Hz)<br>
+                                <li>Practical Frequency Response characteristics of First order low pass filter is as below :</li>
+                                <img src="images/graph.png" width="900" alt="">
+                            </p></ol></div>
+
+                <div class="desc1">
+                    <h1 class="heading"></h1>
+                    <p class="desc">
+                         </p>
+                </div>
+            </div>
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>fine-tune the Cathode ray osilloscope being used for theis experiment for the measurment of amplitude and frequency .</li>
+                        <li>then generate a sinusoidal waveform signal with V<sub>i</sub>=V<SUB>P-P</SUB> amplitude and 10Hz.frequency using the function generator.</li>
+                            
+                        <li>Connect the discrete component having values calculate above as perour desigining filter on the breadboard ></li>
+                        <li> Connect the input terminal V<SUB>I</SUB> with the Function Generator and Connect C.R.O at the Output terminals pf the op-Amp(IC-741)</li>
+                        <li>Now,fix the input Voltage V<sub>i</sub> 1V<sub>P-P</sub> and vary the input frequency (f) from 10Hz to 100Hzand note down 
+                        the corresponding value of output Voltage (V<SUB>0</SUB>) </li>
+                        <li>Calcuate the Gain of the low pass filter using the formula as given below:<br>
+                         Gain=V<SUB>0</SUB>/V<SUB>i</SUB>    </li>
+                        <li>After this Calculate the Corresponding values of the gain magnitude in dB which is approximately equal to 20logV<SUB>0</SUB>/<SUB>i</SUB></li>
+                        <li> Plot the frequency response graph of First order LPF between frequency and Voltage gain (the graph should be similar to the graph represent in figure 2)
+                            . <img src="images/graph.png" width="900" alt=""></li>
+                         <li>After plotting the graph,Calcuate the cutt-off frequency f<sub>C</sub>and roll off factor of the First Order filter and then Compare the theoretical Values with the practical Values .</li>   
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="animation">
+                <div class="title">
+                    <h2 class="heading">Animation</h2>
+                </div>
+                <!-- <div class="desc1">
+                    <p class="desc">Animation of the experiment:--</p>
+                </div>
+                <video id="my-video" class="video-js" controls width="600" poster="images/poster-dna.jpg"
+                    data-setup="{}">
+                    <source src="anime/dna-extract.mp4" type="video/mp4" />
+                </video> -->
+            </div>
+            <!-- <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div>
+                <a href="e-coli.html">
+                    <div class="desc1">
+                        <p class="desc">Click here to perform the simulation</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box" id="observation">
+                <div class="title">
+                    <h2 class="heading">Observation and calculation</h2>
+                </div> <br>
+                <img src="images/q3.png" width="1000px">
+                <div class="desc1">
+                    <p class="desc"> straight line graph is formed by taking concentration of standard DNA in ug/ml
+                        along Xaxis and absorbance at 595nm along the Y-axis.
+                        <br>
+                        <img src="images/q2.png" alt="">
+                    </p>
+                    <h2 class="heading">Calculation</h2>
+                    <div class="desc">
+                        Determine the amount of DNA in the unknown sample by plotting a standard curve of
+                        A595 on Y-axis and µg of DNA on X-axis. <br>
+                        By using the formula <br>
+                        Slope = y<sub>2</sub>-y<sub>1</sub>/x<sub>2</sub>-x<sub>1</sub>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result & Discussion</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">The amount of the DNA present in the given unknown solution = ________µg/ml.
+                    </p>
+                </div>
+                <div class="desc1">
+                    <p class="desc">Deoxyribose in presence of acid converts to a compound that binds with
+                        diphenylamine to form a blue coloured complex. In standard DNA solution the
+                        gradient of blue colour represents the corresponding DNA concentration. <br>
+                        Optical density of lowest concentrated DNA (100 µg/ml) is _____ and optical
+                        density of highest concentrated DNA (1000 µg/ml) is______. The concentration
+                        of unknown DNA is ___ µg/ml. </p>
+                </div>
+
+            </div>
+            <div class="box">
+                <div class="title" id="precaution">
+                    <h2 class="heading">Precaution</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>It is recommended to use freshly prepared diphenylamine reagent. The solution
+                            however, can be stored in advance in dark at 2-8 <sup>0</sup>C</li>
+                        <li> Wear eye protection and use a fume cupboard when preparing this reagent.
+                            Diphenylamine is harmful if ingested or inhaled and may irritate skin or eyes if it
+                            comes into contact with them.
+
+                        </li>
+                        <li>Clean all the test tubes properly before use.</li>
+                        <li>Spectrophotometer should be switched on 15-30 minutes before use to allow it to
+                            warm up.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                    </ol>
+                </div>
+            </div> -->
+        
+        <div class="box" id="references">
+            <div class="title">
+                <h2 class="heading">Question</h2>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>Give some examples of electronic circuits where high pass filter is used?
+                        </li>
+                        <li> Does a differentiator act as a high pass filter? If yes, explain how</li>
+                        <li>Derive the formula of cut-off frequency fc = 1/{2π(RC)} for a first order active Butterworth
+                            high pass filter.</li>
+                        <li>What is Gain Bandwidth Product of an amplifier?</li>
+                        <li>What do you mean by cut off frequency (fc) of a filter?</li>
+                        <li>What is the difference between the Butterworth & Chebyshev & Cauer filter?</li>
+                        <li>What do you mean by order of a filter?</li>
+                    </ol>
+            </div>
+        </div>
+    
+    <!-- VideoJS to beautify video player -->
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+</body>
+
+</html>
