@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/vlab-logo.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="icon" type="image/x-icon" href="images/FavAndLogo.jpg">
+    <link rel="image preload" as="image" href="images/lab-holder-bg1.jpg">
+    <link rel="image preload" as="image" href="images/study.png">
+    <link rel="image preload" as="image" href="images/about.jpg">
+    <link rel="stylesheet" href="style_index.css?version=1">
+    <title>VLab @ ANDC</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="logo" class="vlab-logo" />
+            <div class="heading-text">
+                <h2 class="logo">V-Lab @ ANDC</h2>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li onclick="call(0)" class="active-link"><a>Home</a></li>
+                <li onclick="call(1)"><a>Labs</a></li>
+                <li onclick="call(2)"><a>About</a></li>
+                <li onclick="call(3)"><a>Quick Links</a></li>
+            </ul>
+        </nav>
+        <div class="burger" id="burger-id">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+
+    </header>
+    <section class="container showing" id="home">
+        <div class="slider">
+            <!-- fade css -->
+            <div class="myslide fade">
+                <div class="txt">
+                    <h1>Welcome !!</h1>
+                    <p>ANDC's legacy-<br>Never regard study as a duty<br>But as an enviable opportunity to learn…..
+                    </p>
+                </div>
+                <img src="images/Welcome.jpg" style="width: 100%; height: 120%;" class="carousel-image">
+            </div>
+
+            <div class="myslide fade">
+                <div class="txt">
+                <h1>STAR</h1>
+                    <p>College Scheme<br>Science and Innovation</p>
+                </div>
+                <img src="images/dbt star college.jpg" style="width: 100%; height: 100%;" class="carousel-image">
+            </div>
+
+            <div class="myslide fade">
+                <div class="txt">
+                    <h1>Labs</h1>
+                    <p>Cradle of<br>Innovation and tech.</p>
+                </div>
+                <img src="images/college-img3.jpg" style="width: 100%; height: 100%;" class="carousel-image">
+            </div>
+
+            <div class="myslide fade">
+                <div class="txt">
+                    <h1>Team Work</h1>
+                    <p>brings<br>hope of changing trivial methods.</p>
+                </div>
+                <img src="images/college-img4.jpg" style="width: 100%; height: 100%;" class="carousel-image">
+            </div>
+
+            <div class="myslide fade">
+                <div class="txt">
+                    <h1>Excel</h1>
+                    <p>Touch Heights<br>Never stop being creative.</p>
+                </div>
+                <img src="images/chemical-flasks.jpg" style="width: 100%; height: 100%;" class="carousel-image">
+            </div>
+            <!-- /fade css -->
+
+            <!-- onclick js -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="dotsbox" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+            <!-- /onclick js -->
+        </div>
+    </section>
+    <section class="container" id="lab">
+        <div class="lab-holder">
+            <div class="column-1">
+                <div class="lab">
+                    <div class="logo-holder"><img src="images/physical science.jpg" alt="physical science"
+                            class="dom-logo">
+                    </div>
+                    <div class="text-holder">
+                        <h3>Physical Sciences</h3>
+                        <p>The systamatic study of the inorganic world. <br>
+                        <div class="dm_holder">
+                            <a class="dm" href="./phySc/physics.html" target="_blank" rel="noopener noreferrer">Physics
+                            </a>
+                            <a class="dm" href="./phySc/electronics.html" target="_blank"
+                                rel="noopener noreferrer">Electronics
+                            </a>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="lab">
+                    <div class="logo-holder"><img src="images/biomedical.jpg" alt="biological science" class="dom-logo">
+                    </div>
+                    <div class="text-holder">
+                        <h3>Biological Sciences</h3>
+                        <p>The study of life, life cycles, adaptations and environment.</p>
+                        <div class="dm_holder1">
+                            <a class="dm1" href="./bioSc/bms.html" target="_blank" rel="noopener noreferrer">BMS
+                            </a>
+                            <a class="dm1" href="./bioSc/bot.html" target="_blank" rel="noopener noreferrer">Botany
+                                <a class="dm1" href="./bioSc/zoo.html" target="_blank" rel="noopener noreferrer">Zoology
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column-2">
+                <a href="./csSc/comp.html" target="_blank" rel="noopener noreferrer">
+                    <div class="lab">
+                        <div class="logo-holder"><img src="images/computer.jpg" alt="computer science" class="dom-logo">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Computer Science</h3>
+                            <p>Computational Simulations</p>
+                            <p>The study of computers by their theoretical and practical applications</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="./chSc/chemistry.html" target="_blank" rel="noopener noreferrer">
+                    <div class="lab">
+                        <div class="logo-holder"><img src="images/chemistry.jpg" alt="chemistry" class="dom-logo"></div>
+                        <div class="text-holder">
+                            <h3>Chemical Sciences</h3>
+                            <p>Chemical Phenomena</p>
+                            <p>The scientific study of the properties and behavior of matter</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="about">
+        <div class="about-holder">
+            <div class="vlab-det">
+                <div class="heading">
+                    <h3>What is Virtual Lab ?</h3>
+                </div>
+                <div class="details">
+                    <p>An initiative of Ministry of Human Resource & Development <b>(MHRD)</b> <br> under the aegis
+                        of<br> The National Mission on Education through ICT <b>(NMEICT)</b></p>
+                    <p> Since, our college is now a Nodal Centre <br>
+                        All the 7 DBT- STAR Departments are coming <br> under the gamut of <br> Broad Areas of Virtual
+                        Lab Initiative of <b>NMEICT</b>
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="logo-andc">
+                    <img src="images/andc_logo.jpg" alt="">
+                </div>
+                <div class="college-det">
+                    <h2>ACHARYA NARENDRA DEV COLLEGE</h2>
+                    <p>UNIVERSITY OF DELHI<br>Govindpuri, Kalkaji, New Delhi 110019<br>ACCREDITED 'A' GRADE BY NAAC WITH
+                        SCORE OF 3.31
+                        <br>DBT STAR COLLEGE
+                    </p>
+                </div>
+                <div class="team-link">
+                    <img src="images/logo.png" alt="" width=120 height="120">
+                    <a href="team.html">Know the Team &nbsp;<img
+                            src="https://cdnjs.loli.net/ajax/libs/uswds/0.10.0/img/external-link.svg"
+                            style="height: 20px; width:20px;"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="quick-link">
+        <div class="quick-link-holder">
+            <div class="row">
+                <div class="col-1">
+                    <h2><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College
+                            Website</a></h2>
+                    <p><a href="https://www.andcollege.du.ac.in/econtent/covid19" target="_blank"
+                            rel="noopener noreferrer">Study Materials</a></p>
+                    <p><a href="https://andc-opac.kohacloud.in/" target="_blank" rel="noopener noreferrer">Library</a>
+                    </p>
+                    <p><a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer">NPTEL</a></p>
+                    <p><a href="https://www.andcollege.du.ac.in/contact" target="_blank"
+                            rel="noopener noreferrer">Contact College</a></p>
+                    <!-- <p><a href="credits.html" target="_blank"
+                            rel="noopener noreferrer">Students Credits</a></p> -->
+                    <p><a href="https://www.youtube.com/@pluscoder" target="_blank"
+                            rel="noopener noreferrer">Coding Tutorials</a></p>
+                </div>
+                <div class="col-1">
+                    <h2><a href="https://www.vlab.co.in/" target="_blank" rel="noopener noreferrer">Virtual Labs</a>
+                    </h2>
+                    <p><a href="https://vlab.amrita.edu/" target="_blank" rel="noopener noreferrer">Amrita Virtual
+                            Labs</a></p>
+                    <p><a href="http://vlabs.iitb.ac.in/vlab/" target="_blank" rel="noopener noreferrer">IIT Bombay
+                            Virtual Labs</a></p>
+                    <p><a href="http://vlabs.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">IIT Kharagpur
+                            Virtual Labs</a></p>
+                    <p><a href="https://html-iitd.vlabs.ac.in/" target="_blank" rel="noopener noreferrer">IIT Delhi
+                            Virtual Labs </a>
+                    </p>
+                    <p><a href="https://www.vlab.co.in/participating-institute-iiit-hyderabad" target="_blank"
+                            rel="noopener noreferrer">IIIT Hyderabad Virtual Labs</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <h2>Digital Libraries</h2>
+                    <p><a href="http://opac.nationallibrary.gov.in/cgi-bin/gw/chameleon" target="_blank"
+                            rel="noopener noreferrer">NDL</a></p>
+                    <p><a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">NDL by IIT KGP</a>
+                    </p>
+                    <p><a href="https://dl.acm.org/" target="_blank" rel="noopener noreferrer">ACM DL</a></p>
+                    <p><a href="https://archive.org/" target="_blank" rel="noopener noreferrer">Internet Archive</a></p>
+                    <p><a href="https://www.pdfdrive.com/" target="_blank" rel="noopener noreferrer">PDF Drive</a></p>
+                </div>
+                <div class="col-1">
+                    <h2>Competetive Exams</h2>
+                    <p><a href="https://www.gktoday.in/" target="_blank" rel="noopener noreferrer">GK Today</a></p>
+                    <p><a href="https://dailyepaper.in/home-point/" target="_blank" rel="noopener noreferrer">Daily
+                            e-Paper</a></p>
+                    <p><a href="https://economictimes.indiatimes.com/" target="_blank"
+                            rel="noopener noreferrer">Economic Times</a></p>
+                    <p><a href="https://www.bbc.com/news/world" target="_blank" rel="noopener noreferrer">BBC World
+                            News</a></p>
+                </div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5741418764396685"
+     crossorigin="anonymous"></script>
+            </div>
+            <div class="copyright">
+                <p>&copy; Oct 2021</p>
+                <p>Created and Maintained by</p>
+                <p> Ayush Mishra and Vaibhav Thapliyal</p>
+            </div>
+        </div>
+    </section>
+    <!-- side bar script -->
+    <script defer>
+        const navSlide = () => {
+            const idBurger = document.getElementById("burger-id")
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links')
+            const navLinks = document.querySelectorAll('.nav-links li')
+            burger.addEventListener('click', () => {
+                nav.addEventListener('click', () => {
+                    idBurger.click()
+                })
+                nav.classList.toggle('nav-active');
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = ''
+                    }
+                    else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 4}s`
+                    }
+                });
+                burger.classList.toggle('rotate-line')
+            })
+        };
+        navSlide();
+    </script>
+    <!-- image slider script -->
+    <script defer>
+        const myslide = document.querySelectorAll('.myslide'),
+            dot = document.querySelectorAll('.dot');
+        let counter = 1;
+        slidefun(counter);
+
+        let timer = setInterval(autoSlide, 8000);
+        function autoSlide() {
+            counter += 1;
+            slidefun(counter);
+        }
+        function plusSlides(n) {
+            counter += n;
+            slidefun(counter);
+            resetTimer();
+        }
+        function currentSlide(n) {
+            counter = n;
+            slidefun(counter);
+            resetTimer();
+        }
+        function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(autoSlide, 8000);
+        }
+
+        function slidefun(n) {
+
+            let i;
+            for (i = 0; i < myslide.length; i++) {
+                myslide[i].style.display = "none";
+            }
+            for (i = 0; i < dot.length; i++) {
+                dot[i].className = dot[i].className.replace(' active', '');
+            }
+            if (n > myslide.length) {
+                counter = 1;
+            }
+            if (n < 1) {
+                counter = myslide.length;
+            }
+            myslide[counter - 1].style.display = "block";
+            dot[counter - 1].className += " active";
+        }
+    </script>
+    <!-- active nav-link script -->
+    <script type="text/javascript">
+        $(document).on('click', 'ul li', function () {
+            $(this).addClass('active-link').siblings().removeClass('active-link');
+        })
+    </script>
+    <!-- active tab script -->
+    <script defer type="text/javascript">
+        const link = document.querySelectorAll("nav li")
+        const section = document.querySelectorAll("section")
+        var i = 0;
+        function call(n) {
+            for (i = 0; i < section.length; i++) {
+                section[i].style.display = "none"
+            };
+            section[n].style.display = "block"
+        }
+        call(0);
+    </script>
+    <script type="text/javascript">
+        window.reload();
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+    </script>
+</body>
+
+</html>
